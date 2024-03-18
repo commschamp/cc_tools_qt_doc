@@ -10,7 +10,7 @@ var indexSectionsWithContent =
   7: "cetu",
   8: "bcimnprs",
   9: "c",
-  10: "cd"
+  10: "cds"
 };
 
 var indexSectionNames =

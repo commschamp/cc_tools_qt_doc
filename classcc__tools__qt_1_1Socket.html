@@ -100,6 +100,10 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a3f12d645dfd92dc32ec81ee2b720d49b">ErrorReportCallback</a> = std::function&lt; void(const QString &amp;msg)&gt;</td></tr>
 <tr class="memdesc:a3f12d645dfd92dc32ec81ee2b720d49b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to report errors. <br /></td></tr>
 <tr class="separator:a3f12d645dfd92dc32ec81ee2b720d49b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a277642063c5a98227476bfc63c9418bf"><td class="memItemLeft" align="right" valign="top"><a id="a277642063c5a98227476bfc63c9418bf"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a277642063c5a98227476bfc63c9418bf">InterPluginConfigReportCallback</a> = std::function&lt; void(const QVariantMap &amp;)&gt;</td></tr>
+<tr class="memdesc:a277642063c5a98227476bfc63c9418bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to report inter-plugin configuration updates. <br /></td></tr>
+<tr class="separator:a277642063c5a98227476bfc63c9418bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -111,6 +115,9 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a1759f4c0f69f3e13fb993b3436d71561">~Socket</a> () noexcept</td></tr>
 <tr class="memdesc:a1759f4c0f69f3e13fb993b3436d71561"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a1759f4c0f69f3e13fb993b3436d71561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e002fc7bdbfad525a818735ebaba6b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a2e002fc7bdbfad525a818735ebaba6b7">applyInterPluginConfig</a> (const QVariantMap &amp;props)</td></tr>
+<tr class="memdesc:a2e002fc7bdbfad525a818735ebaba6b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply inter-plugin configuration.  <a href="classcc__tools__qt_1_1Socket.html#a2e002fc7bdbfad525a818735ebaba6b7">More...</a><br /></td></tr>
+<tr class="separator:a2e002fc7bdbfad525a818735ebaba6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b980404f81c127972c9b36fbfa5ef0d"><td class="memItemLeft" align="right" valign="top">unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a0b980404f81c127972c9b36fbfa5ef0d">connectionProperties</a> () const</td></tr>
 <tr class="memdesc:a0b980404f81c127972c9b36fbfa5ef0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get properties describing socket connection right after plugins have been loaded and applied.  <a href="classcc__tools__qt_1_1Socket.html#a0b980404f81c127972c9b36fbfa5ef0d">More...</a><br /></td></tr>
 <tr class="separator:a0b980404f81c127972c9b36fbfa5ef0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -137,6 +144,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a1f1d1fb2f711895391dddf44b6f11dc7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a1f1d1fb2f711895391dddf44b6f11dc7">setErrorReportCallback</a> (TFunc &amp;&amp;func)</td></tr>
 <tr class="memdesc:a1f1d1fb2f711895391dddf44b6f11dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to report errors.  <a href="classcc__tools__qt_1_1Socket.html#a1f1d1fb2f711895391dddf44b6f11dc7">More...</a><br /></td></tr>
 <tr class="separator:a1f1d1fb2f711895391dddf44b6f11dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76349e4c988da27ac9a0e4d88546fbd9"><td class="memTemplParams" colspan="2">template&lt;typename TFunc &gt; </td></tr>
+<tr class="memitem:a76349e4c988da27ac9a0e4d88546fbd9"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a76349e4c988da27ac9a0e4d88546fbd9">setInterPluginConfigReportCallback</a> (TFunc &amp;&amp;func)</td></tr>
+<tr class="memdesc:a76349e4c988da27ac9a0e4d88546fbd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to report inter-plugin configuration.  <a href="classcc__tools__qt_1_1Socket.html#a76349e4c988da27ac9a0e4d88546fbd9">More...</a><br /></td></tr>
+<tr class="separator:a76349e4c988da27ac9a0e4d88546fbd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e7f8f3cd31d54afadc7bf3d48ec6e35"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a2e7f8f3cd31d54afadc7bf3d48ec6e35">socketConnect</a> ()</td></tr>
 <tr class="memdesc:a2e7f8f3cd31d54afadc7bf3d48ec6e35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect socket.  <a href="classcc__tools__qt_1_1Socket.html#a2e7f8f3cd31d54afadc7bf3d48ec6e35">More...</a><br /></td></tr>
 <tr class="separator:a2e7f8f3cd31d54afadc7bf3d48ec6e35"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +163,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a5dd3d6becbfdda6e3d991781dbbdbed2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a5dd3d6becbfdda6e3d991781dbbdbed2">applyInterPluginConfigImpl</a> (const QVariantMap &amp;props)</td></tr>
+<tr class="memdesc:a5dd3d6becbfdda6e3d991781dbbdbed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic inter-plugin configuration application.  <a href="classcc__tools__qt_1_1Socket.html#a5dd3d6becbfdda6e3d991781dbbdbed2">More...</a><br /></td></tr>
+<tr class="separator:a5dd3d6becbfdda6e3d991781dbbdbed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cf44a7bcd29e2e6081cbeba02589ed9"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a8cf44a7bcd29e2e6081cbeba02589ed9">connectionPropertiesImpl</a> () const</td></tr>
 <tr class="memdesc:a8cf44a7bcd29e2e6081cbeba02589ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic connection properties functionality implementation.  <a href="classcc__tools__qt_1_1Socket.html#a8cf44a7bcd29e2e6081cbeba02589ed9">More...</a><br /></td></tr>
 <tr class="separator:a8cf44a7bcd29e2e6081cbeba02589ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,6 +178,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a657bbe75546926d89584dd6169fd7b08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a657bbe75546926d89584dd6169fd7b08">reportError</a> (const QString &amp;msg)</td></tr>
 <tr class="memdesc:a657bbe75546926d89584dd6169fd7b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report I/O operation error.  <a href="classcc__tools__qt_1_1Socket.html#a657bbe75546926d89584dd6169fd7b08">More...</a><br /></td></tr>
 <tr class="separator:a657bbe75546926d89584dd6169fd7b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a3be36b48e01508d4d466b1911dc36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a17a3be36b48e01508d4d466b1911dc36">reportInterPluginConfig</a> (const QVariantMap &amp;props)</td></tr>
+<tr class="memdesc:a17a3be36b48e01508d4d466b1911dc36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report inter-plugin configuration.  <a href="classcc__tools__qt_1_1Socket.html#a17a3be36b48e01508d4d466b1911dc36">More...</a><br /></td></tr>
+<tr class="separator:a17a3be36b48e01508d4d466b1911dc36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c6efe5130aae422dbc92bed81fea274"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a6c6efe5130aae422dbc92bed81fea274">sendDataImpl</a> (<a class="el" href="namespacecc__tools__qt.html#ac0ac73d5a1975385f1b9804aa22698da">DataInfoPtr</a> dataPtr)=0</td></tr>
 <tr class="memdesc:a6c6efe5130aae422dbc92bed81fea274"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic data send functionality implementation.  <a href="classcc__tools__qt_1_1Socket.html#a6c6efe5130aae422dbc92bed81fea274">More...</a><br /></td></tr>
 <tr class="separator:a6c6efe5130aae422dbc92bed81fea274"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,6 +221,66 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2e002fc7bdbfad525a818735ebaba6b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e002fc7bdbfad525a818735ebaba6b7">&#9670;&nbsp;</a></span>applyInterPluginConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cc_tools_qt::Socket::applyInterPluginConfig </td>
+          <td>(</td>
+          <td class="paramtype">const QVariantMap &amp;&#160;</td>
+          <td class="paramname"><em>props</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply inter-plugin configuration. </p>
+<p>Allows one plugin to influence the configuration of another. This function will be called for all currently chosen plugins to override current configuration. Invokes polymorphic <a class="el" href="classcc__tools__qt_1_1Socket.html#a5dd3d6becbfdda6e3d991781dbbdbed2">applyInterPluginConfigImpl()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">props</td><td>Properties map. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5dd3d6becbfdda6e3d991781dbbdbed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dd3d6becbfdda6e3d991781dbbdbed2">&#9670;&nbsp;</a></span>applyInterPluginConfigImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void cc_tools_qt::Socket::applyInterPluginConfigImpl </td>
+          <td>(</td>
+          <td class="paramtype">const QVariantMap &amp;&#160;</td>
+          <td class="paramname"><em>props</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Polymorphic inter-plugin configuration application. </p>
+<p>Invoked by the <a class="el" href="classcc__tools__qt_1_1Socket.html#a2e002fc7bdbfad525a818735ebaba6b7" title="Apply inter-plugin configuration.">applyInterPluginConfig()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">props</td><td>Properties map. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a0b980404f81c127972c9b36fbfa5ef0d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0b980404f81c127972c9b36fbfa5ef0d">&#9670;&nbsp;</a></span>connectionProperties()</h2>
 
@@ -348,6 +425,40 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a17a3be36b48e01508d4d466b1911dc36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17a3be36b48e01508d4d466b1911dc36">&#9670;&nbsp;</a></span>reportInterPluginConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cc_tools_qt::Socket::reportInterPluginConfig </td>
+          <td>(</td>
+          <td class="paramtype">const QVariantMap &amp;&#160;</td>
+          <td class="paramname"><em>props</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Report inter-plugin configuration. </p>
+<p>Sometimes configuration of one plugin may influence configuration of another. Use this function to report inter-plugin configuration properties. When invoked all other plugins are expected to get their respecitve <a class="el" href="classcc__tools__qt_1_1Socket.html#a2e002fc7bdbfad525a818735ebaba6b7">applyInterPluginConfig()</a> functions invoked. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">props</td><td>Reported properties. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="aef27453ae66834eeb0fc034f6375beb1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef27453ae66834eeb0fc034f6375beb1">&#9670;&nbsp;</a></span>sendData()</h2>
 
@@ -469,6 +580,29 @@ template&lt;typename TFunc &gt; </div>
 
 <p>Set callback to report errors. </p>
 <p>The callback must have the same signature as <a class="el" href="classcc__tools__qt_1_1Socket.html#a3f12d645dfd92dc32ec81ee2b720d49b">ErrorReportCallback</a> </p>
+
+</div>
+</div>
+<a id="a76349e4c988da27ac9a0e4d88546fbd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76349e4c988da27ac9a0e4d88546fbd9">&#9670;&nbsp;</a></span>setInterPluginConfigReportCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TFunc &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cc_tools_qt::Socket::setInterPluginConfigReportCallback </td>
+          <td>(</td>
+          <td class="paramtype">TFunc &amp;&amp;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set callback to report inter-plugin configuration. </p>
+<p>The callback must have the same signature as <a class="el" href="classcc__tools__qt_1_1Socket.html#a277642063c5a98227476bfc63c9418bf">InterPluginConfigReportCallback</a>. </p>
 
 </div>
 </div>

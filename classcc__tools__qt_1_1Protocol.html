@@ -101,6 +101,10 @@ using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#ac841e6f42ce81be20f47d042bcef4fe9">ErrorReportCallback</a> = std::function&lt; void(const QString &amp;msg)&gt;</td></tr>
 <tr class="memdesc:ac841e6f42ce81be20f47d042bcef4fe9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of callback to report errors. <br /></td></tr>
 <tr class="separator:ac841e6f42ce81be20f47d042bcef4fe9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7e187ac6f5e11b3d3eb130166e88b4d"><td class="memItemLeft" align="right" valign="top"><a id="ae7e187ac6f5e11b3d3eb130166e88b4d"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#ae7e187ac6f5e11b3d3eb130166e88b4d">InterPluginConfigReportCallback</a> = std::function&lt; void(const QVariantMap &amp;)&gt;</td></tr>
+<tr class="memdesc:ae7e187ac6f5e11b3d3eb130166e88b4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to report inter-plugin configuration updates. <br /></td></tr>
+<tr class="separator:ae7e187ac6f5e11b3d3eb130166e88b4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66c9b9796f1f7dd861ad27b540fd5a15"><td class="memItemLeft" align="right" valign="top"><a id="a66c9b9796f1f7dd861ad27b540fd5a15"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a66c9b9796f1f7dd861ad27b540fd5a15">MessagesList</a> = std::list&lt; <a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> &gt;</td></tr>
 <tr class="memdesc:a66c9b9796f1f7dd861ad27b540fd5a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of messages. <br /></td></tr>
@@ -125,6 +129,9 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a969d05866cc9692ab5c51e38b45f190c">~Protocol</a> () noexcept</td></tr>
 <tr class="memdesc:a969d05866cc9692ab5c51e38b45f190c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor. <br /></td></tr>
 <tr class="separator:a969d05866cc9692ab5c51e38b45f190c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2e7be279eeda15cc386d2ff259fa1a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#af2e7be279eeda15cc386d2ff259fa1a2">applyInterPluginConfig</a> (const QVariantMap &amp;props)</td></tr>
+<tr class="memdesc:af2e7be279eeda15cc386d2ff259fa1a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply inter-plugin configuration.  <a href="classcc__tools__qt_1_1Protocol.html#af2e7be279eeda15cc386d2ff259fa1a2">More...</a><br /></td></tr>
+<tr class="separator:af2e7be279eeda15cc386d2ff259fa1a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab63e005f8975fe75e53b8ea3254bdd6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#ab63e005f8975fe75e53b8ea3254bdd6e">cloneMessage</a> (const <a class="el" href="classcc__tools__qt_1_1Message.html">Message</a> &amp;msg)</td></tr>
 <tr class="memdesc:ab63e005f8975fe75e53b8ea3254bdd6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone the message object.  <a href="classcc__tools__qt_1_1Protocol.html#ab63e005f8975fe75e53b8ea3254bdd6e">More...</a><br /></td></tr>
 <tr class="separator:ab63e005f8975fe75e53b8ea3254bdd6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,6 +160,10 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a11940e5869356bd02732bf113d7668ae"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a11940e5869356bd02732bf113d7668ae">setErrorReportCallback</a> (TFunc &amp;&amp;func)</td></tr>
 <tr class="memdesc:a11940e5869356bd02732bf113d7668ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to report errors.  <a href="classcc__tools__qt_1_1Protocol.html#a11940e5869356bd02732bf113d7668ae">More...</a><br /></td></tr>
 <tr class="separator:a11940e5869356bd02732bf113d7668ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac966c59bce475cc56ffa8ac44e0f5626"><td class="memTemplParams" colspan="2">template&lt;typename TFunc &gt; </td></tr>
+<tr class="memitem:ac966c59bce475cc56ffa8ac44e0f5626"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#ac966c59bce475cc56ffa8ac44e0f5626">setInterPluginConfigReportCallback</a> (TFunc &amp;&amp;func)</td></tr>
+<tr class="memdesc:ac966c59bce475cc56ffa8ac44e0f5626"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to report inter-plugin configuration.  <a href="classcc__tools__qt_1_1Protocol.html#ac966c59bce475cc56ffa8ac44e0f5626">More...</a><br /></td></tr>
+<tr class="separator:ac966c59bce475cc56ffa8ac44e0f5626"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2e92779e508a446f2ae96d402833ed8"><td class="memTemplParams" colspan="2">template&lt;typename TFunc &gt; </td></tr>
 <tr class="memitem:ab2e92779e508a446f2ae96d402833ed8"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#ab2e92779e508a446f2ae96d402833ed8">setSendMessageRequestCallback</a> (TFunc &amp;&amp;func)</td></tr>
 <tr class="memdesc:ab2e92779e508a446f2ae96d402833ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the callback to allow request of extra messages to be sent out.  <a href="classcc__tools__qt_1_1Protocol.html#ab2e92779e508a446f2ae96d402833ed8">More...</a><br /></td></tr>
@@ -169,6 +180,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:af91807078caee549a16590faedb9ec8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#af91807078caee549a16590faedb9ec8b">applyInterPluginConfigImpl</a> (const QVariantMap &amp;props)</td></tr>
+<tr class="memdesc:af91807078caee549a16590faedb9ec8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic inter-plugin configuration application.  <a href="classcc__tools__qt_1_1Protocol.html#af91807078caee549a16590faedb9ec8b">More...</a><br /></td></tr>
+<tr class="separator:af91807078caee549a16590faedb9ec8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6299c0763e134616f0e45730e7e0da87"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a6299c0763e134616f0e45730e7e0da87">cloneMessageImpl</a> (const <a class="el" href="classcc__tools__qt_1_1Message.html">Message</a> &amp;msg)=0</td></tr>
 <tr class="memdesc:a6299c0763e134616f0e45730e7e0da87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic message cloning functionality.  <a href="classcc__tools__qt_1_1Protocol.html#a6299c0763e134616f0e45730e7e0da87">More...</a><br /></td></tr>
 <tr class="separator:a6299c0763e134616f0e45730e7e0da87"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,12 +203,12 @@ virtual <a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de
 virtual <a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a59f5d46595b599ba255602f9c7fdf4ca">createRawDataMessageImpl</a> ()=0</td></tr>
 <tr class="memdesc:a59f5d46595b599ba255602f9c7fdf4ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic creation of message object representing raw data. <br /></td></tr>
 <tr class="separator:a59f5d46595b599ba255602f9c7fdf4ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe42f086ec7c7e432de0ec0ca450b8a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#afe42f086ec7c7e432de0ec0ca450b8a4">messageReceivedReportImpl</a> (<a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> msg)</td></tr>
-<tr class="memdesc:afe42f086ec7c7e432de0ec0ca450b8a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic processing of the message reception report.  <a href="classcc__tools__qt_1_1Protocol.html#afe42f086ec7c7e432de0ec0ca450b8a4">More...</a><br /></td></tr>
-<tr class="separator:afe42f086ec7c7e432de0ec0ca450b8a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad727823ec2e0817c7ee8409bde444b9b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#ad727823ec2e0817c7ee8409bde444b9b">messageSentReportImpl</a> (<a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> msg)</td></tr>
-<tr class="memdesc:ad727823ec2e0817c7ee8409bde444b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the protocol aware that the message has been sent out to the remote end.  <a href="classcc__tools__qt_1_1Protocol.html#ad727823ec2e0817c7ee8409bde444b9b">More...</a><br /></td></tr>
-<tr class="separator:ad727823ec2e0817c7ee8409bde444b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cd74c5e4b0c9ec519ef9050ea4d7b18"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a0cd74c5e4b0c9ec519ef9050ea4d7b18">messageReceivedReportImpl</a> (<a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> msg)</td></tr>
+<tr class="memdesc:a0cd74c5e4b0c9ec519ef9050ea4d7b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic processing of the message reception report.  <a href="classcc__tools__qt_1_1Protocol.html#a0cd74c5e4b0c9ec519ef9050ea4d7b18">More...</a><br /></td></tr>
+<tr class="separator:a0cd74c5e4b0c9ec519ef9050ea4d7b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad614fc0a628c11269dca11f33ae44b89"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#ad614fc0a628c11269dca11f33ae44b89">messageSentReportImpl</a> (<a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> msg)</td></tr>
+<tr class="memdesc:ad614fc0a628c11269dca11f33ae44b89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make the protocol aware that the message has been sent out to the remote end.  <a href="classcc__tools__qt_1_1Protocol.html#ad614fc0a628c11269dca11f33ae44b89">More...</a><br /></td></tr>
+<tr class="separator:ad614fc0a628c11269dca11f33ae44b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0854ee143bd7876ad0ae5b2c553aa52d"><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a0854ee143bd7876ad0ae5b2c553aa52d">nameImpl</a> () const =0</td></tr>
 <tr class="memdesc:a0854ee143bd7876ad0ae5b2c553aa52d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic protocol name retrieval.  <a href="classcc__tools__qt_1_1Protocol.html#a0854ee143bd7876ad0ae5b2c553aa52d">More...</a><br /></td></tr>
 <tr class="separator:a0854ee143bd7876ad0ae5b2c553aa52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,6 +218,9 @@ virtual <a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de
 <tr class="memitem:a0c34cc0badb47692d0d6c12e5f69cc56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a0c34cc0badb47692d0d6c12e5f69cc56">reportError</a> (const QString &amp;str)</td></tr>
 <tr class="memdesc:a0c34cc0badb47692d0d6c12e5f69cc56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report operation error.  <a href="classcc__tools__qt_1_1Protocol.html#a0c34cc0badb47692d0d6c12e5f69cc56">More...</a><br /></td></tr>
 <tr class="separator:a0c34cc0badb47692d0d6c12e5f69cc56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeea0c0af5725f4dc06f032c2f15f363a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#aeea0c0af5725f4dc06f032c2f15f363a">reportInterPluginConfig</a> (const QVariantMap &amp;props)</td></tr>
+<tr class="memdesc:aeea0c0af5725f4dc06f032c2f15f363a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report inter-plugin configuration.  <a href="classcc__tools__qt_1_1Protocol.html#aeea0c0af5725f4dc06f032c2f15f363a">More...</a><br /></td></tr>
+<tr class="separator:aeea0c0af5725f4dc06f032c2f15f363a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2dbbd680490e19432b22e0cebc383848"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a2dbbd680490e19432b22e0cebc383848">sendMessageRequest</a> (<a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> msg)</td></tr>
 <tr class="memdesc:a2dbbd680490e19432b22e0cebc383848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request a protocol message to be sent out.  <a href="classcc__tools__qt_1_1Protocol.html#a2dbbd680490e19432b22e0cebc383848">More...</a><br /></td></tr>
 <tr class="separator:a2dbbd680490e19432b22e0cebc383848"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,6 +308,66 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="af2e7be279eeda15cc386d2ff259fa1a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2e7be279eeda15cc386d2ff259fa1a2">&#9670;&nbsp;</a></span>applyInterPluginConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cc_tools_qt::Protocol::applyInterPluginConfig </td>
+          <td>(</td>
+          <td class="paramtype">const QVariantMap &amp;&#160;</td>
+          <td class="paramname"><em>props</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Apply inter-plugin configuration. </p>
+<p>Allows one plugin to influence the configuration of another. This function will be called for all currently chosen plugins to override current configuration. Invokes polymorphic <a class="el" href="classcc__tools__qt_1_1Protocol.html#af91807078caee549a16590faedb9ec8b">applyInterPluginConfigImpl()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">props</td><td>Properties map. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af91807078caee549a16590faedb9ec8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af91807078caee549a16590faedb9ec8b">&#9670;&nbsp;</a></span>applyInterPluginConfigImpl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void cc_tools_qt::Protocol::applyInterPluginConfigImpl </td>
+          <td>(</td>
+          <td class="paramtype">const QVariantMap &amp;&#160;</td>
+          <td class="paramname"><em>props</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Polymorphic inter-plugin configuration application. </p>
+<p>Invoked by the <a class="el" href="classcc__tools__qt_1_1Protocol.html#af2e7be279eeda15cc386d2ff259fa1a2" title="Apply inter-plugin configuration.">applyInterPluginConfig()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">props</td><td>Properties map. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab63e005f8975fe75e53b8ea3254bdd6e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab63e005f8975fe75e53b8ea3254bdd6e">&#9670;&nbsp;</a></span>cloneMessage()</h2>
 
@@ -539,7 +616,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><div class="memdoc">
 
 <p>Make the protocol aware that the message has been received from remote end. </p>
-<p>Invokes <a class="el" href="classcc__tools__qt_1_1Protocol.html#afe42f086ec7c7e432de0ec0ca450b8a4">messageReceivedReportImpl()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Invokes <a class="el" href="classcc__tools__qt_1_1Protocol.html#a0cd74c5e4b0c9ec519ef9050ea4d7b18">messageReceivedReportImpl()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>Pointer to the message object </td></tr>
   </table>
@@ -548,8 +625,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a id="afe42f086ec7c7e432de0ec0ca450b8a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afe42f086ec7c7e432de0ec0ca450b8a4">&#9670;&nbsp;</a></span>messageReceivedReportImpl()</h2>
+<a id="a0cd74c5e4b0c9ec519ef9050ea4d7b18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cd74c5e4b0c9ec519ef9050ea4d7b18">&#9670;&nbsp;</a></span>messageReceivedReportImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -558,7 +635,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cc_tools_qt::Protocol::messageReceivedReportImpl </td>
+          <td class="memname">virtual void cc_tools_qt::Protocol::messageReceivedReportImpl </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a>&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
@@ -567,7 +644,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -599,7 +676,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div><div class="memdoc">
 
 <p>Make the protocol aware that the message has been sent out to the remote end. </p>
-<p>Invokes <a class="el" href="classcc__tools__qt_1_1Protocol.html#ad727823ec2e0817c7ee8409bde444b9b">messageSentReportImpl()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Invokes <a class="el" href="classcc__tools__qt_1_1Protocol.html#ad614fc0a628c11269dca11f33ae44b89">messageSentReportImpl()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>Pointer to the message object </td></tr>
   </table>
@@ -608,8 +685,8 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a id="ad727823ec2e0817c7ee8409bde444b9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad727823ec2e0817c7ee8409bde444b9b">&#9670;&nbsp;</a></span>messageSentReportImpl()</h2>
+<a id="ad614fc0a628c11269dca11f33ae44b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad614fc0a628c11269dca11f33ae44b89">&#9670;&nbsp;</a></span>messageSentReportImpl()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -618,7 +695,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void cc_tools_qt::Protocol::messageSentReportImpl </td>
+          <td class="memname">virtual void cc_tools_qt::Protocol::messageSentReportImpl </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a>&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
@@ -627,7 +704,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -803,6 +880,40 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
+<a id="aeea0c0af5725f4dc06f032c2f15f363a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeea0c0af5725f4dc06f032c2f15f363a">&#9670;&nbsp;</a></span>reportInterPluginConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cc_tools_qt::Protocol::reportInterPluginConfig </td>
+          <td>(</td>
+          <td class="paramtype">const QVariantMap &amp;&#160;</td>
+          <td class="paramname"><em>props</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Report inter-plugin configuration. </p>
+<p>Sometimes configuration of one plugin may influence configuration of another. Use this function to report inter-plugin configuration properties. When invoked all other plugins are expected to get their respecitve <a class="el" href="classcc__tools__qt_1_1Protocol.html#af2e7be279eeda15cc386d2ff259fa1a2">applyInterPluginConfig()</a> functions invoked. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">props</td><td>Reported properties. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a2dbbd680490e19432b22e0cebc383848"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2dbbd680490e19432b22e0cebc383848">&#9670;&nbsp;</a></span>sendMessageRequest()</h2>
 
@@ -857,6 +968,29 @@ template&lt;typename TFunc &gt; </div>
 
 <p>Set callback to report errors. </p>
 <p>The callback must have the same signature as <a class="el" href="classcc__tools__qt_1_1Protocol.html#ac841e6f42ce81be20f47d042bcef4fe9">ErrorReportCallback</a> </p>
+
+</div>
+</div>
+<a id="ac966c59bce475cc56ffa8ac44e0f5626"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac966c59bce475cc56ffa8ac44e0f5626">&#9670;&nbsp;</a></span>setInterPluginConfigReportCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TFunc &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void cc_tools_qt::Protocol::setInterPluginConfigReportCallback </td>
+          <td>(</td>
+          <td class="paramtype">TFunc &amp;&amp;&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set callback to report inter-plugin configuration. </p>
+<p>The callback must have the same signature as <a class="el" href="classcc__tools__qt_1_1Protocol.html#ae7e187ac6f5e11b3d3eb130166e88b4d">InterPluginConfigReportCallback</a>. </p>
 
 </div>
 </div>
