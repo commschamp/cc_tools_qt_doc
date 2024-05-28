@@ -163,6 +163,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a16a38765105900cfb3044f9dca05e35c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a66c9b9796f1f7dd861ad27b540fd5a15">MessagesList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a16a38765105900cfb3044f9dca05e35c">read</a> (const <a class="el" href="structcc__tools__qt_1_1DataInfo.html">DataInfo</a> &amp;dataInfo, bool final=false)</td></tr>
 <tr class="memdesc:a16a38765105900cfb3044f9dca05e35c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read the received data input.  <a href="classcc__tools__qt_1_1Protocol.html#a16a38765105900cfb3044f9dca05e35c">More...</a><br /></td></tr>
 <tr class="separator:a16a38765105900cfb3044f9dca05e35c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a959bd4bd2c7066b8d5b70e9f01a7ef16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a959bd4bd2c7066b8d5b70e9f01a7ef16">setDebugOutputLevel</a> (unsigned level=0U)</td></tr>
+<tr class="memdesc:a959bd4bd2c7066b8d5b70e9f01a7ef16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set debug output level.  <a href="classcc__tools__qt_1_1Protocol.html#a959bd4bd2c7066b8d5b70e9f01a7ef16">More...</a><br /></td></tr>
+<tr class="separator:a959bd4bd2c7066b8d5b70e9f01a7ef16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11940e5869356bd02732bf113d7668ae"><td class="memTemplParams" colspan="2">template&lt;typename TFunc &gt; </td></tr>
 <tr class="memitem:a11940e5869356bd02732bf113d7668ae"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a11940e5869356bd02732bf113d7668ae">setErrorReportCallback</a> (TFunc &amp;&amp;func)</td></tr>
 <tr class="memdesc:a11940e5869356bd02732bf113d7668ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to report errors.  <a href="classcc__tools__qt_1_1Protocol.html#a11940e5869356bd02732bf113d7668ae">More...</a><br /></td></tr>
@@ -273,6 +276,10 @@ virtual <a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de
 virtual <a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ProtocolBase.html#a744ea51f95e0eeb23e65dc524d0103bd">createRawDataMessageImpl</a> () override</td></tr>
 <tr class="memdesc:a744ea51f95e0eeb23e65dc524d0103bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overriding implementation to <a class="el" href="classcc__tools__qt_1_1Protocol.html#a59f5d46595b599ba255602f9c7fdf4ca" title="Polymorphic creation of message object representing raw data.">Protocol::createRawDataMessageImpl()</a>. <br /></td></tr>
 <tr class="separator:a744ea51f95e0eeb23e65dc524d0103bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97b6b4603a4c49ac52ee642c8651d22"><td class="memItemLeft" align="right" valign="top"><a id="ae97b6b4603a4c49ac52ee642c8651d22"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#ae97b6b4603a4c49ac52ee642c8651d22">getDebugOutputLevel</a> () const</td></tr>
+<tr class="memdesc:ae97b6b4603a4c49ac52ee642c8651d22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current debug output level. <br /></td></tr>
+<tr class="separator:ae97b6b4603a4c49ac52ee642c8651d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cd74c5e4b0c9ec519ef9050ea4d7b18"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Protocol.html#a0cd74c5e4b0c9ec519ef9050ea4d7b18">messageReceivedReportImpl</a> (<a class="el" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> msg)</td></tr>
 <tr class="memdesc:a0cd74c5e4b0c9ec519ef9050ea4d7b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic processing of the message reception report.  <a href="classcc__tools__qt_1_1Protocol.html#a0cd74c5e4b0c9ec519ef9050ea4d7b18">More...</a><br /></td></tr>
 <tr class="separator:a0cd74c5e4b0c9ec519ef9050ea4d7b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -950,6 +957,40 @@ template&lt;typename TProtStack , typename TTransportMsg , typename TRawDataMsg 
 <p>This function is expected to be invoked by the derived class, when an extra message needs to be sent out. This function will invoke callback set by <a class="el" href="classcc__tools__qt_1_1Protocol.html#ab2e92779e508a446f2ae96d402833ed8">setSendMessageRequestCallback()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>Pointer to the message object. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a959bd4bd2c7066b8d5b70e9f01a7ef16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959bd4bd2c7066b8d5b70e9f01a7ef16">&#9670;&nbsp;</a></span>setDebugOutputLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cc_tools_qt::Protocol::setDebugOutputLevel </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>level</em> = <code>0U</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set debug output level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Debug level. If <b>0</b>, debug output is disabled </td></tr>
   </table>
   </dd>
 </dl>

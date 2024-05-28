@@ -32,7 +32,7 @@ var searchData=
   ['connectionproperty_5fnondisconnectable_48',['ConnectionProperty_NonDisconnectable',['../classcc__tools__qt_1_1Socket.html#addda314eea52dd24a2c92ff53569222ea8f4bd87687cfef1512bed3dc00b3deb7',1,'cc_tools_qt::Socket']]],
   ['connectionstatusreportcallback_49',['ConnectionStatusReportCallback',['../classcc__tools__qt_1_1Socket.html#ad95d7f9f9eb4bda5a0cfc1ce61e74d76',1,'cc_tools_qt::Socket']]],
   ['createallmessages_50',['createAllMessages',['../classcc__tools__qt_1_1Protocol.html#a27fd1f5dfaebbd599a59aa8f60c5b447',1,'cc_tools_qt::Protocol']]],
-  ['createallmessagesimpl_51',['createAllMessagesImpl',['../classcc__tools__qt_1_1Protocol.html#abeb38061e8b83d1a5fef2051221f5eac',1,'cc_tools_qt::Protocol::createAllMessagesImpl()'],['../classcc__tools__qt_1_1ProtocolBase.html#a0931f30cdbf25b362f42f72dade03a09',1,'cc_tools_qt::ProtocolBase::createAllMessagesImpl() override']]],
+  ['createallmessagesimpl_51',['createAllMessagesImpl',['../classcc__tools__qt_1_1ProtocolBase.html#a0931f30cdbf25b362f42f72dade03a09',1,'cc_tools_qt::ProtocolBase::createAllMessagesImpl()'],['../classcc__tools__qt_1_1Protocol.html#abeb38061e8b83d1a5fef2051221f5eac',1,'cc_tools_qt::Protocol::createAllMessagesImpl()']]],
   ['createallmessagesintuple_52',['createAllMessagesInTuple',['../classcc__tools__qt_1_1ProtocolBase.html#a8e35afea0fbd29963542c72305557330',1,'cc_tools_qt::ProtocolBase']]],
   ['createconfiguarionwidget_53',['createConfiguarionWidget',['../classcc__tools__qt_1_1Plugin.html#ad0e7f6c0ee9a06ff3b59579653909dfa',1,'cc_tools_qt::Plugin']]],
   ['createextrainfomessageimpl_54',['createExtraInfoMessageImpl',['../classcc__tools__qt_1_1Protocol.html#a7dc0af5f619536c651b0149111ed33e7',1,'cc_tools_qt::Protocol::createExtraInfoMessageImpl()'],['../classcc__tools__qt_1_1ProtocolBase.html#aa874d1e3d58160fcd56ca928839905b6',1,'cc_tools_qt::ProtocolBase::createExtraInfoMessageImpl()']]],
@@ -43,8 +43,9 @@ var searchData=
   ['createmessage_59',['createMessage',['../classcc__tools__qt_1_1Protocol.html#ad417b760f8457e099f63589cfecca2cf',1,'cc_tools_qt::Protocol::createMessage()'],['../classcc__tools__qt_1_1ProtocolBase.html#aabc8fbe62435b117fbe16df9e233b890',1,'cc_tools_qt::ProtocolBase::createMessage()']]],
   ['createmessageimpl_60',['createMessageImpl',['../classcc__tools__qt_1_1Protocol.html#a67ef0e4e464f1f49912064613bb56652',1,'cc_tools_qt::Protocol::createMessageImpl()'],['../classcc__tools__qt_1_1ProtocolBase.html#a3b576ee3eeaaa9bfb123475cfae9f909',1,'cc_tools_qt::ProtocolBase::createMessageImpl()']]],
   ['createprotocol_61',['createProtocol',['../classcc__tools__qt_1_1Plugin.html#a7340bbd60578fdd02763b6844db7fe96',1,'cc_tools_qt::Plugin']]],
-  ['createrawdatamessageimpl_62',['createRawDataMessageImpl',['../classcc__tools__qt_1_1Protocol.html#a59f5d46595b599ba255602f9c7fdf4ca',1,'cc_tools_qt::Protocol::createRawDataMessageImpl()'],['../classcc__tools__qt_1_1ProtocolBase.html#a744ea51f95e0eeb23e65dc524d0103bd',1,'cc_tools_qt::ProtocolBase::createRawDataMessageImpl()']]],
+  ['createrawdatamessageimpl_62',['createRawDataMessageImpl',['../classcc__tools__qt_1_1ProtocolBase.html#a744ea51f95e0eeb23e65dc524d0103bd',1,'cc_tools_qt::ProtocolBase::createRawDataMessageImpl()'],['../classcc__tools__qt_1_1Protocol.html#a59f5d46595b599ba255602f9c7fdf4ca',1,'cc_tools_qt::Protocol::createRawDataMessageImpl()']]],
   ['createsocket_63',['createSocket',['../classcc__tools__qt_1_1Plugin.html#a86a35bb03d77601b0415e56fa80daf5d',1,'cc_tools_qt::Plugin']]],
-  ['field_64',['field',['../namespacecc__tools__qt_1_1property_1_1field.html',1,'cc_tools_qt::property']]],
-  ['property_65',['property',['../namespacecc__tools__qt_1_1property.html',1,'cc_tools_qt']]]
+  ['currtimestamp_64',['currTimestamp',['../classcc__tools__qt_1_1Socket.html#a9843e0a9883054f8d668242a8c0aabfd',1,'cc_tools_qt::Socket::currTimestamp()'],['../classcc__tools__qt_1_1Filter.html#a7797642726b1fa897df7d656ee18c989',1,'cc_tools_qt::Filter::currTimestamp()']]],
+  ['field_65',['field',['../namespacecc__tools__qt_1_1property_1_1field.html',1,'cc_tools_qt::property']]],
+  ['property_66',['property',['../namespacecc__tools__qt_1_1property.html',1,'cc_tools_qt']]]
 ];

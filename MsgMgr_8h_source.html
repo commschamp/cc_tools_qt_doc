@@ -91,70 +91,72 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;Api.h&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;Message.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;Protocol.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;Message.h&quot;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;Socket.h&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;Filter.h&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecc__tools__qt.html">cc_tools_qt</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">class </span>MsgMgrImpl;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span>CC_API MsgMgr</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">typedef</span> std::vector&lt;MessagePtr&gt; AllMessages;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcc__tools__qt_1_1Protocol.html#a66c9b9796f1f7dd861ad27b540fd5a15">Protocol::MessagesList</a> MessagesList;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcc__tools__qt_1_1Message.html#a2d84dddb3997e283179c16649694d634">Message::Type</a> MsgType;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    MsgMgr();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    ~MsgMgr() noexcept;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> start();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> stop();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> clear();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="namespacecc__tools__qt.html#a271bd36079ba9a5d5fe07508a48451ad">SocketPtr</a> getSocket() const;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="namespacecc__tools__qt.html#a3f93a2ad75fdafbad184ac48706d85aa">ProtocolPtr</a> getProtocol() const;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> setRecvEnabled(<span class="keywordtype">bool</span> enabled);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> deleteMsg(<a class="code" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> msg);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> deleteAllMsgs();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> sendMsgs(MessagesList&amp;&amp; msgs);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;Api.h&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;Message.h&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;Protocol.h&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;Message.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;Socket.h&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;Filter.h&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacecc__tools__qt.html">cc_tools_qt</a></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">class </span>MsgMgrImpl;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">class </span>CC_API MsgMgr</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">typedef</span> std::list&lt;MessagePtr&gt; AllMessages;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcc__tools__qt_1_1Protocol.html#a66c9b9796f1f7dd861ad27b540fd5a15">Protocol::MessagesList</a> MessagesList;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">typedef</span> <a class="code" href="classcc__tools__qt_1_1Message.html#a2d84dddb3997e283179c16649694d634">Message::Type</a> MsgType;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    MsgMgr();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ~MsgMgr() noexcept;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> start();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> stop();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> clear();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="namespacecc__tools__qt.html#a271bd36079ba9a5d5fe07508a48451ad">SocketPtr</a> getSocket() const;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="namespacecc__tools__qt.html#a3f93a2ad75fdafbad184ac48706d85aa">ProtocolPtr</a> getProtocol() const;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> setRecvEnabled(<span class="keywordtype">bool</span> enabled);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> deleteMsg(<a class="code" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> msg);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> deleteMsgs(const MessagesList&amp; msgs);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> deleteAllMsgs();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    const AllMessages&amp; getAllMsgs() const;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> addMsgs(const MessagesList&amp; msgs, <span class="keywordtype">bool</span> reportAdded = true);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> setSocket(<a class="code" href="namespacecc__tools__qt.html#a271bd36079ba9a5d5fe07508a48451ad">SocketPtr</a> socket);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> setProtocol(<a class="code" href="namespacecc__tools__qt.html#a3f93a2ad75fdafbad184ac48706d85aa">ProtocolPtr</a> protocol);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> addFilter(<a class="code" href="namespacecc__tools__qt.html#ac9bde88f87d53a0d92693bdc9f40d8ce">FilterPtr</a> filter);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    typedef std::function&lt;<span class="keywordtype">void</span> (<a class="code" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> msg)&gt; MsgAddedCallbackFunc;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    typedef std::function&lt;<span class="keywordtype">void</span> (const QString&amp; error)&gt; ErrorReportCallbackFunc;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    typedef std::function&lt;<span class="keywordtype">void</span> (<span class="keywordtype">bool</span> connected)&gt; SocketConnectionStatusReportCallbackFunc;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> setMsgAddedCallbackFunc(MsgAddedCallbackFunc&amp;&amp; func);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> setErrorReportCallbackFunc(ErrorReportCallbackFunc&amp;&amp; func);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setSocketConnectionStatusReportCallbackFunc(SocketConnectionStatusReportCallbackFunc&amp;&amp; func);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;private:</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    std::unique_ptr&lt;MsgMgrImpl&gt; m_impl;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}  <span class="comment">// namespace cc_tools_qt</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> sendMsgs(MessagesList&amp;&amp; msgs);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    const AllMessages&amp; getAllMsgs() const;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> addMsgs(const MessagesList&amp; msgs, <span class="keywordtype">bool</span> reportAdded = true);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> setSocket(<a class="code" href="namespacecc__tools__qt.html#a271bd36079ba9a5d5fe07508a48451ad">SocketPtr</a> socket);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> setProtocol(<a class="code" href="namespacecc__tools__qt.html#a3f93a2ad75fdafbad184ac48706d85aa">ProtocolPtr</a> protocol);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> addFilter(<a class="code" href="namespacecc__tools__qt.html#ac9bde88f87d53a0d92693bdc9f40d8ce">FilterPtr</a> filter);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    typedef std::function&lt;<span class="keywordtype">void</span> (<a class="code" href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">MessagePtr</a> msg)&gt; MsgAddedCallbackFunc;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    typedef std::function&lt;<span class="keywordtype">void</span> (const QString&amp; error)&gt; ErrorReportCallbackFunc;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    typedef std::function&lt;<span class="keywordtype">void</span> (<span class="keywordtype">bool</span> connected)&gt; SocketConnectionStatusReportCallbackFunc;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> setMsgAddedCallbackFunc(MsgAddedCallbackFunc&amp;&amp; func);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> setErrorReportCallbackFunc(ErrorReportCallbackFunc&amp;&amp; func);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> setSocketConnectionStatusReportCallbackFunc(SocketConnectionStatusReportCallbackFunc&amp;&amp; func);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;private:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    std::unique_ptr&lt;MsgMgrImpl&gt; m_impl;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;};</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}  <span class="comment">// namespace cc_tools_qt</span></div>
 <div class="ttc" id="aclasscc__tools__qt_1_1Message_html_a2d84dddb3997e283179c16649694d634"><div class="ttname"><a href="classcc__tools__qt_1_1Message.html#a2d84dddb3997e283179c16649694d634">cc_tools_qt::Message::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Type of the message.</div><div class="ttdef"><b>Definition:</b> Message.h:48</div></div>
 <div class="ttc" id="aclasscc__tools__qt_1_1Protocol_html_a66c9b9796f1f7dd861ad27b540fd5a15"><div class="ttname"><a href="classcc__tools__qt_1_1Protocol.html#a66c9b9796f1f7dd861ad27b540fd5a15">cc_tools_qt::Protocol::MessagesList</a></div><div class="ttdeci">std::list&lt; MessagePtr &gt; MessagesList</div><div class="ttdoc">List of messages.</div><div class="ttdef"><b>Definition:</b> Protocol.h:46</div></div>
 <div class="ttc" id="anamespacecc__tools__qt_html"><div class="ttname"><a href="namespacecc__tools__qt.html">cc_tools_qt</a></div><div class="ttdoc">Main namespace for all classes / functions of the shared library.</div></div>
-<div class="ttc" id="anamespacecc__tools__qt_html_a271bd36079ba9a5d5fe07508a48451ad"><div class="ttname"><a href="namespacecc__tools__qt.html#a271bd36079ba9a5d5fe07508a48451ad">cc_tools_qt::SocketPtr</a></div><div class="ttdeci">std::shared_ptr&lt; Socket &gt; SocketPtr</div><div class="ttdoc">Pointer to Socket object.</div><div class="ttdef"><b>Definition:</b> Socket.h:235</div></div>
-<div class="ttc" id="anamespacecc__tools__qt_html_a3f93a2ad75fdafbad184ac48706d85aa"><div class="ttname"><a href="namespacecc__tools__qt.html#a3f93a2ad75fdafbad184ac48706d85aa">cc_tools_qt::ProtocolPtr</a></div><div class="ttdeci">std::shared_ptr&lt; Protocol &gt; ProtocolPtr</div><div class="ttdoc">Pointer to Protocol object.</div><div class="ttdef"><b>Definition:</b> Protocol.h:285</div></div>
+<div class="ttc" id="anamespacecc__tools__qt_html_a271bd36079ba9a5d5fe07508a48451ad"><div class="ttname"><a href="namespacecc__tools__qt.html#a271bd36079ba9a5d5fe07508a48451ad">cc_tools_qt::SocketPtr</a></div><div class="ttdeci">std::shared_ptr&lt; Socket &gt; SocketPtr</div><div class="ttdoc">Pointer to Socket object.</div><div class="ttdef"><b>Definition:</b> Socket.h:246</div></div>
+<div class="ttc" id="anamespacecc__tools__qt_html_a3f93a2ad75fdafbad184ac48706d85aa"><div class="ttname"><a href="namespacecc__tools__qt.html#a3f93a2ad75fdafbad184ac48706d85aa">cc_tools_qt::ProtocolPtr</a></div><div class="ttdeci">std::shared_ptr&lt; Protocol &gt; ProtocolPtr</div><div class="ttdoc">Pointer to Protocol object.</div><div class="ttdef"><b>Definition:</b> Protocol.h:293</div></div>
 <div class="ttc" id="anamespacecc__tools__qt_html_a83cabe125c6cfe279b897de564a79c58"><div class="ttname"><a href="namespacecc__tools__qt.html#a83cabe125c6cfe279b897de564a79c58">cc_tools_qt::MessagePtr</a></div><div class="ttdeci">std::shared_ptr&lt; Message &gt; MessagePtr</div><div class="ttdoc">Smart pointer to Message.</div><div class="ttdef"><b>Definition:</b> Message.h:157</div></div>
-<div class="ttc" id="anamespacecc__tools__qt_html_ac9bde88f87d53a0d92693bdc9f40d8ce"><div class="ttname"><a href="namespacecc__tools__qt.html#ac9bde88f87d53a0d92693bdc9f40d8ce">cc_tools_qt::FilterPtr</a></div><div class="ttdeci">std::shared_ptr&lt; Filter &gt; FilterPtr</div><div class="ttdoc">Pointer to Filter object.</div><div class="ttdef"><b>Definition:</b> Filter.h:186</div></div>
+<div class="ttc" id="anamespacecc__tools__qt_html_ac9bde88f87d53a0d92693bdc9f40d8ce"><div class="ttname"><a href="namespacecc__tools__qt.html#ac9bde88f87d53a0d92693bdc9f40d8ce">cc_tools_qt::FilterPtr</a></div><div class="ttdeci">std::shared_ptr&lt; Filter &gt; FilterPtr</div><div class="ttdoc">Pointer to Filter object.</div><div class="ttdef"><b>Definition:</b> Filter.h:200</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

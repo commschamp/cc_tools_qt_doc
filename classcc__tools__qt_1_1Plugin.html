@@ -141,6 +141,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:ad54be8cabeaeb5963606dcf4ce1b78fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Plugin.html#ad54be8cabeaeb5963606dcf4ce1b78fb">reconfigure</a> (const QVariantMap &amp;config)</td></tr>
 <tr class="memdesc:ad54be8cabeaeb5963606dcf4ce1b78fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request to perform reconfigure.  <a href="classcc__tools__qt_1_1Plugin.html#ad54be8cabeaeb5963606dcf4ce1b78fb">More...</a><br /></td></tr>
 <tr class="separator:ad54be8cabeaeb5963606dcf4ce1b78fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1cee2573115614324ccace50a327ac5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Plugin.html#ab1cee2573115614324ccace50a327ac5">setDebugOutputLevel</a> (unsigned level=0U)</td></tr>
+<tr class="memdesc:ab1cee2573115614324ccace50a327ac5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set debug output level.  <a href="classcc__tools__qt_1_1Plugin.html#ab1cee2573115614324ccace50a327ac5">More...</a><br /></td></tr>
+<tr class="separator:ab1cee2573115614324ccace50a327ac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5caedea73f18cdf9ba485d48072437f1"><td class="memItemLeft" align="right" valign="top"><a id="a5caedea73f18cdf9ba485d48072437f1"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Plugin.html#a5caedea73f18cdf9ba485d48072437f1">setInterPluginConfigReportCallback</a> (<a class="el" href="classcc__tools__qt_1_1Plugin.html#a53de0001c8e56abe6f533aae6ee80be3">InterPluginConfigReportCallback</a> &amp;&amp;func)</td></tr>
 <tr class="memdesc:a5caedea73f18cdf9ba485d48072437f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to report inter-plugin configuration. <br /></td></tr>
@@ -543,6 +546,32 @@ Protected Member Functions</h2></td></tr>
 <p>Sometimes configuration of one plugin may influence configuration of another. Use this function to report inter-plugin configuration properties. When invoked all other plugins are expected to get their respecitve <a class="el" href="classcc__tools__qt_1_1Plugin.html#a3a910af9f917afcd17fcc545d2da88ec">applyInterPluginConfig()</a> functions invoked. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">props</td><td>Reported properties. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab1cee2573115614324ccace50a327ac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1cee2573115614324ccace50a327ac5">&#9670;&nbsp;</a></span>setDebugOutputLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cc_tools_qt::Plugin::setDebugOutputLevel </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>level</em> = <code>0U</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set debug output level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Debug level. If <b>0</b>, debug output is disabled </td></tr>
   </table>
   </dd>
 </dl>

@@ -70,6 +70,7 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classcc__tools__qt_1_1Filter-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cc_tools_qt::Filter Class Reference</div>  </div>
@@ -119,6 +120,9 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:ab302e96512c2685238b36f40b500cb71"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Filter.html#ab302e96512c2685238b36f40b500cb71">setDataToSendCallback</a> (TFunc &amp;&amp;func)</td></tr>
 <tr class="memdesc:ab302e96512c2685238b36f40b500cb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to report outgoing data.  <a href="classcc__tools__qt_1_1Filter.html#ab302e96512c2685238b36f40b500cb71">More...</a><br /></td></tr>
 <tr class="separator:ab302e96512c2685238b36f40b500cb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f2845609ca7ee03e6b4fd8f3669deaf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Filter.html#a3f2845609ca7ee03e6b4fd8f3669deaf">setDebugOutputLevel</a> (unsigned level=0U)</td></tr>
+<tr class="memdesc:a3f2845609ca7ee03e6b4fd8f3669deaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set debug output level.  <a href="classcc__tools__qt_1_1Filter.html#a3f2845609ca7ee03e6b4fd8f3669deaf">More...</a><br /></td></tr>
+<tr class="separator:a3f2845609ca7ee03e6b4fd8f3669deaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab461b0d73738016c9c54def30f2d6699"><td class="memTemplParams" colspan="2">template&lt;typename TFunc &gt; </td></tr>
 <tr class="memitem:ab461b0d73738016c9c54def30f2d6699"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Filter.html#ab461b0d73738016c9c54def30f2d6699">setErrorReportCallback</a> (TFunc &amp;&amp;func)</td></tr>
 <tr class="memdesc:ab461b0d73738016c9c54def30f2d6699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to report errors.  <a href="classcc__tools__qt_1_1Filter.html#ab461b0d73738016c9c54def30f2d6699">More...</a><br /></td></tr>
@@ -142,6 +146,14 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a9df0ea84925969907c6e839a6389c411"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Filter.html#a9df0ea84925969907c6e839a6389c411">applyInterPluginConfigImpl</a> (const QVariantMap &amp;props)</td></tr>
 <tr class="memdesc:a9df0ea84925969907c6e839a6389c411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic inter-plugin configuration application.  <a href="classcc__tools__qt_1_1Filter.html#a9df0ea84925969907c6e839a6389c411">More...</a><br /></td></tr>
 <tr class="separator:a9df0ea84925969907c6e839a6389c411"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e19762c21af055195d4c7e1d2328a94"><td class="memItemLeft" align="right" valign="top"><a id="a0e19762c21af055195d4c7e1d2328a94"></a>
+virtual const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Filter.html#a0e19762c21af055195d4c7e1d2328a94">debugNameImpl</a> () const</td></tr>
+<tr class="memdesc:a0e19762c21af055195d4c7e1d2328a94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get plugin name for the debug output. <br /></td></tr>
+<tr class="separator:a0e19762c21af055195d4c7e1d2328a94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a08005b92009ba94760e09565de965d"><td class="memItemLeft" align="right" valign="top"><a id="a4a08005b92009ba94760e09565de965d"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Filter.html#a4a08005b92009ba94760e09565de965d">getDebugOutputLevel</a> () const</td></tr>
+<tr class="memdesc:a4a08005b92009ba94760e09565de965d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current debug output level. <br /></td></tr>
+<tr class="separator:a4a08005b92009ba94760e09565de965d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a678348252c4532392ad0d674329e85de"><td class="memItemLeft" align="right" valign="top">virtual QList&lt; <a class="el" href="namespacecc__tools__qt.html#ac0ac73d5a1975385f1b9804aa22698da">DataInfoPtr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Filter.html#a678348252c4532392ad0d674329e85de">recvDataImpl</a> (<a class="el" href="namespacecc__tools__qt.html#ac0ac73d5a1975385f1b9804aa22698da">DataInfoPtr</a> dataPtr)</td></tr>
 <tr class="memdesc:a678348252c4532392ad0d674329e85de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic processing of incoming data.  <a href="classcc__tools__qt_1_1Filter.html#a678348252c4532392ad0d674329e85de">More...</a><br /></td></tr>
 <tr class="separator:a678348252c4532392ad0d674329e85de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,6 +178,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a70dfb38de47c0a63ec464b78f2284664"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Filter.html#a70dfb38de47c0a63ec464b78f2284664">stopImpl</a> ()</td></tr>
 <tr class="memdesc:a70dfb38de47c0a63ec464b78f2284664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic stop functionality implementation.  <a href="classcc__tools__qt_1_1Filter.html#a70dfb38de47c0a63ec464b78f2284664">More...</a><br /></td></tr>
 <tr class="separator:a70dfb38de47c0a63ec464b78f2284664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a7797642726b1fa897df7d656ee18c989"><td class="memItemLeft" align="right" valign="top"><a id="a7797642726b1fa897df7d656ee18c989"></a>
+static unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Filter.html#a7797642726b1fa897df7d656ee18c989">currTimestamp</a> ()</td></tr>
+<tr class="memdesc:a7797642726b1fa897df7d656ee18c989"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current timestamp. <br /></td></tr>
+<tr class="separator:a7797642726b1fa897df7d656ee18c989"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1b2e9e0022e41efb6d2c8d14ff145ba6"></a>
@@ -462,6 +481,32 @@ template&lt;typename TFunc &gt; </div>
 
 <p>Set callback to report outgoing data. </p>
 <p>The filter is allowed to generate outgoing data independently The provided callback is used to request its send. The callback must have the same signature as <a class="el" href="classcc__tools__qt_1_1Filter.html#a67db171263bfc6ee9f62f4b456ee12c7">DataToSendCallback</a> </p>
+
+</div>
+</div>
+<a id="a3f2845609ca7ee03e6b4fd8f3669deaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f2845609ca7ee03e6b4fd8f3669deaf">&#9670;&nbsp;</a></span>setDebugOutputLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cc_tools_qt::Filter::setDebugOutputLevel </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>level</em> = <code>0U</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set debug output level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Debug level. If <b>0</b>, debug output is disabled </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

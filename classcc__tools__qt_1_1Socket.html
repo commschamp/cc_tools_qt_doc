@@ -70,6 +70,7 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classcc__tools__qt_1_1Socket-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">cc_tools_qt::Socket Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -140,6 +141,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:aaa61f680b7487a23e008d51b94ac586c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#aaa61f680b7487a23e008d51b94ac586c">setDataReceivedCallback</a> (TFunc &amp;&amp;func)</td></tr>
 <tr class="memdesc:aaa61f680b7487a23e008d51b94ac586c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to report incoming data.  <a href="classcc__tools__qt_1_1Socket.html#aaa61f680b7487a23e008d51b94ac586c">More...</a><br /></td></tr>
 <tr class="separator:aaa61f680b7487a23e008d51b94ac586c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e0d087155f77c933d169c0fa7ff718b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a1e0d087155f77c933d169c0fa7ff718b">setDebugOutputLevel</a> (unsigned level=0U)</td></tr>
+<tr class="memdesc:a1e0d087155f77c933d169c0fa7ff718b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set debug output level.  <a href="classcc__tools__qt_1_1Socket.html#a1e0d087155f77c933d169c0fa7ff718b">More...</a><br /></td></tr>
+<tr class="separator:a1e0d087155f77c933d169c0fa7ff718b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f1d1fb2f711895391dddf44b6f11dc7"><td class="memTemplParams" colspan="2">template&lt;typename TFunc &gt; </td></tr>
 <tr class="memitem:a1f1d1fb2f711895391dddf44b6f11dc7"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a1f1d1fb2f711895391dddf44b6f11dc7">setErrorReportCallback</a> (TFunc &amp;&amp;func)</td></tr>
 <tr class="memdesc:a1f1d1fb2f711895391dddf44b6f11dc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set callback to report errors.  <a href="classcc__tools__qt_1_1Socket.html#a1f1d1fb2f711895391dddf44b6f11dc7">More...</a><br /></td></tr>
@@ -169,6 +173,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8cf44a7bcd29e2e6081cbeba02589ed9"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a8cf44a7bcd29e2e6081cbeba02589ed9">connectionPropertiesImpl</a> () const</td></tr>
 <tr class="memdesc:a8cf44a7bcd29e2e6081cbeba02589ed9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic connection properties functionality implementation.  <a href="classcc__tools__qt_1_1Socket.html#a8cf44a7bcd29e2e6081cbeba02589ed9">More...</a><br /></td></tr>
 <tr class="separator:a8cf44a7bcd29e2e6081cbeba02589ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af76ed4a469a84adf7d66b931a0acb715"><td class="memItemLeft" align="right" valign="top"><a id="af76ed4a469a84adf7d66b931a0acb715"></a>
+unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#af76ed4a469a84adf7d66b931a0acb715">getDebugOutputLevel</a> () const</td></tr>
+<tr class="memdesc:af76ed4a469a84adf7d66b931a0acb715"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current debug output level. <br /></td></tr>
+<tr class="separator:af76ed4a469a84adf7d66b931a0acb715"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab9ad8af4ec99d915f3e4759b6b2bff1e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#ab9ad8af4ec99d915f3e4759b6b2bff1e">reportDataReceived</a> (<a class="el" href="namespacecc__tools__qt.html#ac0ac73d5a1975385f1b9804aa22698da">DataInfoPtr</a> dataPtr)</td></tr>
 <tr class="memdesc:ab9ad8af4ec99d915f3e4759b6b2bff1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report new data has been received.  <a href="classcc__tools__qt_1_1Socket.html#ab9ad8af4ec99d915f3e4759b6b2bff1e">More...</a><br /></td></tr>
 <tr class="separator:ab9ad8af4ec99d915f3e4759b6b2bff1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,6 +204,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a311d5a674ded410ad7625d46baf08559"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a311d5a674ded410ad7625d46baf08559">stopImpl</a> ()</td></tr>
 <tr class="memdesc:a311d5a674ded410ad7625d46baf08559"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic stop functionality implementation.  <a href="classcc__tools__qt_1_1Socket.html#a311d5a674ded410ad7625d46baf08559">More...</a><br /></td></tr>
 <tr class="separator:a311d5a674ded410ad7625d46baf08559"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a9843e0a9883054f8d668242a8c0aabfd"><td class="memItemLeft" align="right" valign="top"><a id="a9843e0a9883054f8d668242a8c0aabfd"></a>
+static unsigned long long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1Socket.html#a9843e0a9883054f8d668242a8c0aabfd">currTimestamp</a> ()</td></tr>
+<tr class="memdesc:a9843e0a9883054f8d668242a8c0aabfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current timestamp. <br /></td></tr>
+<tr class="separator:a9843e0a9883054f8d668242a8c0aabfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="addda314eea52dd24a2c92ff53569222e"></a>
@@ -557,6 +572,32 @@ template&lt;typename TFunc &gt; </div>
 
 <p>Set callback to report incoming data. </p>
 <p>The callback must have the same signature as <a class="el" href="classcc__tools__qt_1_1Socket.html#ad4a986438bb08b1b3247255218115bdc">DataReceivedCallback</a>. </p>
+
+</div>
+</div>
+<a id="a1e0d087155f77c933d169c0fa7ff718b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e0d087155f77c933d169c0fa7ff718b">&#9670;&nbsp;</a></span>setDebugOutputLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cc_tools_qt::Socket::setDebugOutputLevel </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>level</em> = <code>0U</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set debug output level. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Debug level. If <b>0</b>, debug output is disabled </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
