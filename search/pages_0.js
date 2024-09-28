@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cc_5ftools_5fqt_20library_632',['cc_tools_qt Library',['../index.html',1,'']]]
+  ['a_20plugin_0',['Defining a Plugin',['../page_plugin.html',1,'']]],
+  ['application_1',['Developing Custom Tool Application',['../page_custom_app.html',1,'']]]
 ];
