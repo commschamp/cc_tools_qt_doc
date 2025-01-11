@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['msgallocfailure_0',['MsgAllocFailure',['../namespacecc__tools__qt.html#a700a291f5700cb184c0ee39626887e84a37b538d9e3266acd66229ede1dcceb70',1,'cc_tools_qt']]]
+  ['received_0',['Received',['../classcc__tools__qt_1_1ToolsMessage.html#afb6b64e2c15ce8a4b8962c16a41265c3aac5bb077c33753116b5e91ff1766e7bc',1,'cc_tools_qt::ToolsMessage']]]
 ];

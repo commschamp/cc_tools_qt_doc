@@ -75,7 +75,6 @@ $(function() {
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
 <ul><li class="level1"><a href="#mainpage_plugin_type">Plugin Types</a></li>
-<li class="level1"><a href="#mainpage_headers">Header Files</a></li>
 <li class="level1"><a href="#mainpage_tutorials">Tutorials</a></li>
 </ul>
 </div>
@@ -95,16 +94,12 @@ Plugin Types</h1>
 <img src="dia_plugins.png" />
 </div>
 <p>The <b>socket</b> and <b>protocol</b> plugins are "must have" ones, without them the tools won't be able to operate properly. The <b>filters</b>, on the other hand, are optional. They need to be used when there are any additional transport layers and/or encryption between the raw data received by the I/O <b>socket</b> and the data delivered to the analysed communication <b>protocol</b> for processing.</p>
-<p>The <b><a class="el" href="namespacecc__tools__qt.html" title="Main namespace for all classes / functions of the shared library.">cc_tools_qt</a></b> shared library is implemented using <a href="http://doc.qt.io/qt-5/qt5-intro.html">Qt</a> framework using its signals/slots functionality and expects the main application to drive the event loop using <a href="http://doc.qt.io/qt-5/qapplication.html">QApplication</a> object. </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
+<p>The <b><a class="el" href="namespacecc__tools__qt.html" title="Main namespace for all classes / functions of the shared library.">cc_tools_qt</a></b> shared library is implemented using <a href="https://www.qt.io/">Qt</a> framework using its signals/slots functionality and expects the main application to drive the event loop using <a href="https://doc.qt.io/qt-5/qapplication.html">QApplication</a> object. </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[])</div>
 <div class="line">{</div>
 <div class="line">    QApplication app(argc, argv);</div>
 <div class="line">    ... <span class="comment">// Some other relevant objects</span></div>
 <div class="line">    <span class="keywordflow">return</span> app-&gt;exec();</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="mainpage_headers"></a>
-Header Files</h1>
-<p>The documentation page of every mentioned in the tutorial class specifies the relevant include statement. The <b><a class="el" href="namespacecc__tools__qt.html" title="Main namespace for all classes / functions of the shared library.">cc_tools_qt</a></b> library also provides single "include all" file which can be used. </p><div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="cc__tools__qt_8h.html">cc_tools_qt/cc_tools_qt.h</a>&quot;</span></div>
-<div class="ttc" id="acc__tools__qt_8h_html"><div class="ttname"><a href="cc__tools__qt_8h.html">cc_tools_qt.h</a></div><div class="ttdoc">Single &quot;include all&quot; file.</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="mainpage_tutorials"></a>
 Tutorials</h1>
 <p>Please choose the tutorial subject below, relevant for your development. They are completely independent and can be read separately. </p><ul>

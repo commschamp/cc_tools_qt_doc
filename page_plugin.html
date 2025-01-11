@@ -74,24 +74,20 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="toc"><h3>Table of Contents</h3>
-<ul><li class="level1"><a href="#page_plugin_configuration">Plugin Configuration</a></li>
-<li class="level1"><a href="#page_plugin_properties">Plugin Properties</a><ul><li class="level2"><a href="#page_plugin_properties_socket">Socket Allocation Callback</a></li>
-<li class="level2"><a href="#page_plugin_properties_protocol">Protocol Allocation Callback</a></li>
-<li class="level2"><a href="#page_plugin_properties_filter">Filter Allocation Callback</a></li>
-<li class="level2"><a href="#page_plugin_properties_config_widget">Configuration Widget</a></li>
-<li class="level2"><a href="#page_plugin_properties_gui_actions">GUI Actions</a></li>
+<ul><li class="level1"><a href="#page_plugin_configuration">Plugin Configuration</a><ul><li class="level2"><a href="#page_plugin_config_widget">Configuration Widget</a></li>
+<li class="level2"><a href="#page_plugin_gui_actions">GUI Actions</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<div class="textblock"><p>This project uses <a href="http://doc.qt.io/qt-5/qtplugin.html">Qt Infrastructure</a> to define and load plugins. The custom plugin definition shared object needs to contain its own <b>Plugin</b> class that inherits from <a class="el" href="classcc__tools__qt_1_1Plugin.html" title="Interface class for plugin definition.">cc_tools_qt::Plugin</a> and uses various Qt macros to describe itself. As an example please take a look at <a href="https://github.com/commschamp/cc_tools_qt/blob/master/plugin/echo_socket/EchoSocketPlugin.h">EchoSocketPlugin.h</a> from this project. </p><div class="fragment"><div class="line"><span class="keyword">class </span>EchoSocketPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1Plugin.html">cc_tools_qt::Plugin</a></div>
+<div class="textblock"><p>This project uses <a href="http://doc.qt.io/qt-5/qtplugin.html">Qt Infrastructure</a> to define and load plugins. The custom plugin definition shared object needs to contain its own <b>Plugin</b> class that inherits from <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a> and uses various Qt macros to describe itself. As an example please take a look at <a href="https://github.com/commschamp/cc_tools_qt/blob/master/plugin/echo_socket/EchoSocketPlugin.h">EchoSocketPlugin.h</a> from this project. </p><div class="fragment"><div class="line"><span class="keyword">class </span>EchoSocketPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div>
 <div class="line">{</div>
 <div class="line">    Q_OBJECT</div>
 <div class="line">    Q_PLUGIN_METADATA(IID <span class="stringliteral">&quot;cc.EchoSocketPlugin&quot;</span> FILE <span class="stringliteral">&quot;echo_socket.json&quot;</span>)</div>
-<div class="line">    Q_INTERFACES(<a class="code hl_class" href="classcc__tools__qt_1_1Plugin.html">cc_tools_qt::Plugin</a>)</div>
+<div class="line">    Q_INTERFACES(<a class="code hl_class" href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a>)</div>
 <div class="line">    ...</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1Plugin_html"><div class="ttname"><a href="classcc__tools__qt_1_1Plugin.html">cc_tools_qt::Plugin</a></div><div class="ttdoc">Interface class for plugin definition.</div><div class="ttdef"><b>Definition</b> Plugin.h:39</div></div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div><div class="ttdoc">Interface class for plugin definition.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.h:42</div></div>
 </div><!-- fragment --><p> It must contain <a href="http://doc.qt.io/qt-5/qtplugin.html#Q_PLUGIN_METADATA">Q_PLUGIN_METADATA()</a> macro with unique ID of the plugin and name of the file that contains a detailed plugin description. The file contents are expected to be a valid <a href="https://www.w3schools.com/js/js_json_objects.asp">JSON object</a> with three values: </p><ul>
 <li><b>name</b> - Short, human readable name of the plugin </li>
 <li><b>desc</b> - Multi line description of the plugin. The value is expected to be <a href="https://www.w3schools.com/js/js_json_arrays.asp">JSON array</a> of strings. </li>
@@ -104,29 +100,28 @@ $(function() {
 <div class="line">    ],</div>
 <div class="line">    <span class="stringliteral">&quot;type&quot;</span> : <span class="stringliteral">&quot;socket&quot;</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><p> The plugin definition class must also contain explicit declaration of implementing <a class="el" href="classcc__tools__qt_1_1Plugin.html" title="Interface class for plugin definition.">cc_tools_qt::Plugin</a> interface using <a href="http://doc.qt.io/qt-5/qobject.html#Q_INTERFACES">Q_INTERFACES()</a> macro.</p>
+</div><!-- fragment --><p> The plugin definition class must also contain explicit declaration of implementing <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html" title="Interface class for plugin definition.">cc_tools_qt::ToolsPlugin</a> interface using <a href="http://doc.qt.io/qt-5/qobject.html#Q_INTERFACES">Q_INTERFACES()</a> macro.</p>
 <p>Also, don't forget to use <a href="http://doc.qt.io/qt-5/qobject.html#Q_OBJECT">Q_OBJECT</a> macro and run <a href="http://doc.qt.io/qt-5/why-moc.html">moc</a> utility on the header when building the plugin's shared library.</p>
 <h1><a class="anchor" id="page_plugin_configuration"></a>
 Plugin Configuration</h1>
 <p>Some plugins may require an ability to be configured. For example, remote address and/or port for TCP/IP client socket.</p>
 <p>The <a href="https://github.com/commschamp/cc_tools_qt">CommsChampion Tools</a> implement an ability to save and load the list of plugins with their respective configurations. Such list as well as plugins' configurations are stored in single file as human readable <a href="https://www.w3schools.com/js/js_json_objects.asp">json object</a>. The Qt framework implements its own parsing and handling of such files. The parsed json object is returned as <a href="http://doc.qt.io/qt-5/qvariant.html#QVariantMap-typedef">QVariantMap</a>. When requested, every plugin must be able to provide its own configuration by filling the given <b>QVariantMap</b> object as well as retrieve and apply the new configuration from it.</p>
-<p>The <a class="el" href="classcc__tools__qt_1_1Plugin.html" title="Interface class for plugin definition.">cc_tools_qt::Plugin</a> class is implemented using <br  />
- <a href="https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Non-Virtual_Interface">Non-Virtual Interface Idiom</a> It's non-virtual public interface is used by the driving application. The inheriting class needs to implement virtual <b>*Impl</b>() functions to override the default behaviour.</p>
-<p>The <a class="el" href="classcc__tools__qt_1_1Plugin.html" title="Interface class for plugin definition.">cc_tools_qt::Plugin</a> class defines the following virtual functions that are used for getting / setting the plugin's configuration. </p><div class="fragment"><div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecc__tools__qt.html">cc_tools_qt</a></div>
+<p>The <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html" title="Interface class for plugin definition.">cc_tools_qt::ToolsPlugin</a> class is implemented using <a href="https://en.wikibooks.org/wiki/More_C%2B%2B_Idioms/Non-Virtual_Interface">Non-Virtual Interface Idiom</a>. Its non-virtual public interface is used by the driving application. The inheriting class needs to implement virtual <b>*Impl</b>() functions to override the default behaviour.</p>
+<p>The <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a> class defines the following virtual functions that are used for getting / setting the plugin's configuration. </p><div class="fragment"><div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecc__tools__qt.html">cc_tools_qt</a></div>
 <div class="line">{</div>
-<div class="line"><span class="keyword">class </span>Plugin : <span class="keyword">public</span> QObject</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">class </span>Plugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div>
 <div class="line">{</div>
 <div class="line">    ...</div>
 <div class="line">protected:</div>
 <div class="line">    <span class="comment">// Retrieve current configuration</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcc__tools__qt_1_1Plugin.html#abcb3174283d79bb970417ec3042c1f83">getCurrentConfigImpl</a>(QVariantMap&amp; config);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> getCurrentConfigImpl(QVariantMap&amp; config) <span class="keyword">override</span>;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Apply new configuration</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classcc__tools__qt_1_1Plugin.html#ac5a6e6ac723a5a7824eefb289e0015b5">reconfigureImpl</a>(<span class="keyword">const</span> QVariantMap&amp; config);</div>
+<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> reconfigureImpl(<span class="keyword">const</span> QVariantMap&amp; config) <span class="keyword">override</span>;</div>
 <div class="line">};</div>
+<div class="line"> </div>
 <div class="line">} <span class="comment">// namespace cc_tools_qt</span></div>
-<div class="ttc" id="aclasscc__tools__qt_1_1Plugin_html_abcb3174283d79bb970417ec3042c1f83"><div class="ttname"><a href="classcc__tools__qt_1_1Plugin.html#abcb3174283d79bb970417ec3042c1f83">cc_tools_qt::Plugin::getCurrentConfigImpl</a></div><div class="ttdeci">virtual void getCurrentConfigImpl(QVariantMap &amp;config)</div><div class="ttdoc">Polymorphic call to retrieve current configuration.</div></div>
-<div class="ttc" id="aclasscc__tools__qt_1_1Plugin_html_ac5a6e6ac723a5a7824eefb289e0015b5"><div class="ttname"><a href="classcc__tools__qt_1_1Plugin.html#ac5a6e6ac723a5a7824eefb289e0015b5">cc_tools_qt::Plugin::reconfigureImpl</a></div><div class="ttdeci">virtual void reconfigureImpl(const QVariantMap &amp;config)</div><div class="ttdoc">Polymorphic call to perform plugin (re)configuration.</div></div>
 <div class="ttc" id="anamespacecc__tools__qt_html"><div class="ttname"><a href="namespacecc__tools__qt.html">cc_tools_qt</a></div><div class="ttdoc">Main namespace for all classes / functions of the shared library.</div></div>
 </div><!-- fragment --><p> If the custom plugin being implemented requires external configuration, the inheriting class is expected to override these functions. It is recommended that the plugin will bundle its full configuration as single <b>QVariantMap</b> object, which will be inserted as one value into the provided <b>QVariantMap</b> full configuration object. For example, let's take a look at <a href="https://github.com/commschamp/cc_tools_qt/blob/master/plugin/tcp_socket/client/TcpClientSocketPlugin.cpp">TCP/IP Client Socket</a> plugin configuration: </p><div class="fragment"><div class="line"><span class="keyword">const</span> QString MainConfigKey(<span class="stringliteral">&quot;cc_tcp_client_socket&quot;</span>);</div>
 <div class="line"><span class="keyword">const</span> QString HostSubKey(<span class="stringliteral">&quot;host&quot;</span>);</div>
@@ -173,130 +168,38 @@ Plugin Configuration</h1>
 <div class="line">        m_socket-&gt;setPort(port);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="page_plugin_properties"></a>
-Plugin Properties</h1>
-<p>In addition to explained above configuration, the plugin is expected to apply extra properties which will allow the running application to use it properly. The <a class="el" href="classcc__tools__qt_1_1Plugin.html" title="Interface class for plugin definition.">cc_tools_qt::Plugin</a> class provides an access to <a class="el" href="classcc__tools__qt_1_1PluginProperties.html" title="Accumulation of various properties of Plugin.">cc_tools_qt::PluginProperties</a> object, which is stored as its data member. </p><div class="fragment"><div class="line"><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecc__tools__qt.html">cc_tools_qt</a></div>
-<div class="line">{</div>
-<div class="line"><span class="keyword">class </span>Plugin : <span class="keyword">public</span> QObject</div>
+</div><!-- fragment --><h2><a class="anchor" id="page_plugin_config_widget"></a>
+Configuration Widget</h2>
+<p>As was mentioned earlier, the plugin may require some configuration. The command line application will receive required parameters via command line arguments. The GUI application, on the other hand, must provide a convenient way to allow user to perform such configuration.</p>
+<p>The developed plugins are expected to be used "as-is" with any of the <a href="https://github.com/commschamp/cc_tools_qt">CommsChampion Tools</a> applications, both GUI and command-line ones. As the result, the developed plugin is expected to be able to create and return a widget object, which will be displayed by the GUI application at some stage. If plugin requires configuration it should also override <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html#a44e45de9e7f1786b49bd46ad4ef890eb">createConfigurationWidgetImpl()</a> virtual member function. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div>
 <div class="line">{</div>
 <div class="line">    ...</div>
 <div class="line">protected:</div>
-<div class="line">    <span class="comment">// Get access to properties object</span></div>
-<div class="line">    PluginProperties&amp; <a class="code hl_function" href="classcc__tools__qt_1_1Plugin.html#af72273227ee7b9e978a6903fdff77a51">pluginProperties</a>();</div>
-<div class="line"> </div>
-<div class="line"><span class="keyword">private</span>:</div>
-<div class="line">    PluginProperties m_props;</div>
-<div class="line">};</div>
-<div class="line">}  <span class="comment">// namespace cc_tools_qt</span></div>
-<div class="ttc" id="aclasscc__tools__qt_1_1Plugin_html_af72273227ee7b9e978a6903fdff77a51"><div class="ttname"><a href="classcc__tools__qt_1_1Plugin.html#af72273227ee7b9e978a6903fdff77a51">cc_tools_qt::Plugin::pluginProperties</a></div><div class="ttdeci">PluginProperties &amp; pluginProperties()</div><div class="ttdoc">Get access to plugin properties.</div></div>
-</div><!-- fragment --><p> The deriving <b>Plugin</b> class is expected to grab a hold on the properties object and apply its relevant properties. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1Plugin.html">cc_tools_qt::Plugin</a></div>
-<div class="line">{</div>
-<div class="line">    ...</div>
-<div class="line">public:</div>
-<div class="line">    MyPlugin()</div>
-<div class="line">    {</div>
-<div class="line">        <a class="code hl_function" href="classcc__tools__qt_1_1Plugin.html#af72273227ee7b9e978a6903fdff77a51">pluginProperties</a>()</div>
-<div class="line">            .<a class="code hl_function" href="classcc__tools__qt_1_1PluginProperties.html#a3a4f919c0e1f22c20a0a678d47385b2c">setSocketCreateFunc</a>(</div>
-<div class="line">                [<span class="keyword">this</span>]() -&gt; <a class="code hl_typedef" href="namespacecc__tools__qt.html#a271bd36079ba9a5d5fe07508a48451ad">cc_tools_qt::SocketPtr</a></div>
-<div class="line">                {</div>
-<div class="line">                    ...</div>
-<div class="line">                })</div>
-<div class="line">            .setConfigWidgetCreateFunc(</div>
-<div class="line">                [<span class="keyword">this</span>]() -&gt; QWidget*</div>
-<div class="line">                {</div>
-<div class="line">                    ...</div>
-<div class="line">                });</div>
+<div class="line">    <span class="keyword">virtual</span> QWidget* <a class="code hl_function" href="classcc__tools__qt_1_1ToolsPlugin.html#a44e45de9e7f1786b49bd46ad4ef890eb">createConfigurationWidgetImpl</a>()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keyword">new</span> MyConfigWidget(...);</div>
 <div class="line">    }</div>
-<div class="line">    ...</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1PluginProperties_html_a3a4f919c0e1f22c20a0a678d47385b2c"><div class="ttname"><a href="classcc__tools__qt_1_1PluginProperties.html#a3a4f919c0e1f22c20a0a678d47385b2c">cc_tools_qt::PluginProperties::setSocketCreateFunc</a></div><div class="ttdeci">PluginProperties &amp; setSocketCreateFunc(SocketCreateFunc &amp;&amp;func)</div><div class="ttdoc">Assign callback for Socket allocation.</div></div>
-<div class="ttc" id="anamespacecc__tools__qt_html_a271bd36079ba9a5d5fe07508a48451ad"><div class="ttname"><a href="namespacecc__tools__qt.html#a271bd36079ba9a5d5fe07508a48451ad">cc_tools_qt::SocketPtr</a></div><div class="ttdeci">std::shared_ptr&lt; Socket &gt; SocketPtr</div><div class="ttdoc">Pointer to Socket object.</div><div class="ttdef"><b>Definition</b> Socket.h:246</div></div>
-</div><!-- fragment --><p> Let's take a look at available properties one by one.</p>
-<h2><a class="anchor" id="page_plugin_properties_socket"></a>
-Socket Allocation Callback</h2>
-<p>The <b>Socket</b> plugin (see <a class="el" href="page_socket_plugin.html">Developing Custom Socket Plugin</a>) is expected to be able to create and return <a class="el" href="classcc__tools__qt_1_1Socket.html" title="Main polymorphic interface class for sockets.">cc_tools_qt::Socket</a> object when requested. However, it is up to the application to decide when. As the result, the actual plugin class needs to provide a callback to be called when new <a class="el" href="classcc__tools__qt_1_1Socket.html" title="Main polymorphic interface class for sockets.">cc_tools_qt::Socket</a> object is required. It is done using call to <a class="el" href="classcc__tools__qt_1_1PluginProperties.html#a3a4f919c0e1f22c20a0a678d47385b2c" title="Assign callback for Socket allocation.">cc_tools_qt::PluginProperties::setSocketCreateFunc()</a>. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MySocketPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1Plugin.html">cc_tools_qt::Plugin</a></div>
-<div class="line">{</div>
-<div class="line">    ...</div>
-<div class="line">public:</div>
-<div class="line">    MySocketPlugin()</div>
-<div class="line">    {</div>
-<div class="line">        <a class="code hl_function" href="classcc__tools__qt_1_1Plugin.html#af72273227ee7b9e978a6903fdff77a51">pluginProperties</a>()</div>
-<div class="line">            .<a class="code hl_function" href="classcc__tools__qt_1_1PluginProperties.html#a3a4f919c0e1f22c20a0a678d47385b2c">setSocketCreateFunc</a>(</div>
-<div class="line">                [<span class="keyword">this</span>]() -&gt; <a class="code hl_typedef" href="namespacecc__tools__qt.html#a271bd36079ba9a5d5fe07508a48451ad">cc_tools_qt::SocketPtr</a></div>
-<div class="line">                {</div>
-<div class="line">                    ...</div>
-<div class="line">                });</div>
-<div class="line">    }</div>
-<div class="line">    ...</div>
-<div class="line">};</div>
-</div><!-- fragment --><h2><a class="anchor" id="page_plugin_properties_protocol"></a>
-Protocol Allocation Callback</h2>
-<p>The <b>Protocol</b> plugin (see <a class="el" href="page_protocol_plugin.html">Developing Custom Protocol Plugin</a>) is expected to be able to create and return <a class="el" href="classcc__tools__qt_1_1Protocol.html" title="Main polymorphic interface class for protocols.">cc_tools_qt::Protocol</a> object when requested. However, it is up to the application to decide when. As the result, the actual plugin class needs to provide a callback to be called when new <a class="el" href="classcc__tools__qt_1_1Protocol.html" title="Main polymorphic interface class for protocols.">cc_tools_qt::Protocol</a> object is required. It is done using call to <a class="el" href="classcc__tools__qt_1_1PluginProperties.html#a537cd1d667a6a9f8ba027a72557df1ac" title="Assign callback for Protocol allocation.">cc_tools_qt::PluginProperties::setProtocolCreateFunc()</a>. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyProtocolPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1Plugin.html">cc_tools_qt::Plugin</a></div>
-<div class="line">{</div>
-<div class="line">    ...</div>
-<div class="line">public:</div>
-<div class="line">    MyProtocolPlugin()</div>
-<div class="line">    {</div>
-<div class="line">        <a class="code hl_function" href="classcc__tools__qt_1_1Plugin.html#af72273227ee7b9e978a6903fdff77a51">pluginProperties</a>()</div>
-<div class="line">            .<a class="code hl_function" href="classcc__tools__qt_1_1PluginProperties.html#a537cd1d667a6a9f8ba027a72557df1ac">setProtocolCreateFunc</a>(</div>
-<div class="line">                [<span class="keyword">this</span>]() -&gt; <a class="code hl_typedef" href="namespacecc__tools__qt.html#a3f93a2ad75fdafbad184ac48706d85aa">cc_tools_qt::ProtocolPtr</a></div>
-<div class="line">                {</div>
-<div class="line">                    ...</div>
-<div class="line">                });</div>
-<div class="line">    }</div>
-<div class="line">    ...</div>
-<div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1PluginProperties_html_a537cd1d667a6a9f8ba027a72557df1ac"><div class="ttname"><a href="classcc__tools__qt_1_1PluginProperties.html#a537cd1d667a6a9f8ba027a72557df1ac">cc_tools_qt::PluginProperties::setProtocolCreateFunc</a></div><div class="ttdeci">PluginProperties &amp; setProtocolCreateFunc(ProtocolCreateFunc &amp;&amp;func)</div><div class="ttdoc">Assign callback for Protocol allocation.</div></div>
-<div class="ttc" id="anamespacecc__tools__qt_html_a3f93a2ad75fdafbad184ac48706d85aa"><div class="ttname"><a href="namespacecc__tools__qt.html#a3f93a2ad75fdafbad184ac48706d85aa">cc_tools_qt::ProtocolPtr</a></div><div class="ttdeci">std::shared_ptr&lt; Protocol &gt; ProtocolPtr</div><div class="ttdoc">Pointer to Protocol object.</div><div class="ttdef"><b>Definition</b> Protocol.h:293</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="page_plugin_properties_filter"></a>
-Filter Allocation Callback</h2>
-<p>The <b>Filter</b> plugin (see <a class="el" href="page_filter_plugin.html">Developing Custom Filter Plugin</a>) is expected to be able to create and return <a class="el" href="classcc__tools__qt_1_1Filter.html" title="Main polymorphic interface class for filters.">cc_tools_qt::Filter</a> object when requested. However, it is up to the application to decide when. As the result, the actual plugin class needs to provide a callback to be called when new <a class="el" href="classcc__tools__qt_1_1Filter.html" title="Main polymorphic interface class for filters.">cc_tools_qt::Filter</a> object is required. It is done using call to <a class="el" href="classcc__tools__qt_1_1PluginProperties.html#aff468417e65eea5479466257af7f4840" title="Assign callback for Filter allocation.">cc_tools_qt::PluginProperties::setFiltersCreateFunc()</a>. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyFilterPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1Plugin.html">cc_tools_qt::Plugin</a></div>
-<div class="line">{</div>
-<div class="line">    ...</div>
-<div class="line">public:</div>
-<div class="line">    MyFilterPlugin()</div>
-<div class="line">    {</div>
-<div class="line">        <a class="code hl_function" href="classcc__tools__qt_1_1Plugin.html#af72273227ee7b9e978a6903fdff77a51">pluginProperties</a>()</div>
-<div class="line">            .<a class="code hl_function" href="classcc__tools__qt_1_1PluginProperties.html#aff468417e65eea5479466257af7f4840">setFiltersCreateFunc</a>(...);</div>
-<div class="line">    }</div>
-<div class="line">    ...</div>
-<div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1PluginProperties_html_aff468417e65eea5479466257af7f4840"><div class="ttname"><a href="classcc__tools__qt_1_1PluginProperties.html#aff468417e65eea5479466257af7f4840">cc_tools_qt::PluginProperties::setFiltersCreateFunc</a></div><div class="ttdeci">PluginProperties &amp; setFiltersCreateFunc(FiltersCreateFunc &amp;&amp;func)</div><div class="ttdoc">Assign callback for Filter allocation.</div></div>
-</div><!-- fragment --><h2><a class="anchor" id="page_plugin_properties_config_widget"></a>
-Configuration Widget</h2>
-<p>As was mentioned earlier, the plugin may require some configuration. The command line application will receive required parameters via command line arguments. The GUI application, on the other hand, must provide a convenient way to allow user to perform such configuration.</p>
-<p>The developed plugins are expected to be used "as-is" with any of the <a href="https://github.com/commschamp/cc_tools_qt">CommsChampion Tools</a> applications, both GUI and command-line ones. As the result, the developed plugin is expected to be able to create and return a widget object, which will be displayed by the GUI application at some stage. If plugin requires configuration it should also provide a callback to allow creation of such widget. Use <a class="el" href="classcc__tools__qt_1_1PluginProperties.html#a594a32782ed0a0e101577f2f817b73ab" title="Assign callback for configuration widget creation.">cc_tools_qt::PluginProperties::setConfigWidgetCreateFunc()</a> function to set the callback. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1Plugin.html">cc_tools_qt::Plugin</a></div>
-<div class="line">{</div>
-<div class="line">    ...</div>
-<div class="line">public:</div>
-<div class="line">    MyPlugin()</div>
-<div class="line">    {</div>
-<div class="line">        <a class="code hl_function" href="classcc__tools__qt_1_1Plugin.html#af72273227ee7b9e978a6903fdff77a51">pluginProperties</a>()</div>
-<div class="line">            .<a class="code hl_function" href="classcc__tools__qt_1_1PluginProperties.html#a594a32782ed0a0e101577f2f817b73ab">setConfigWidgetCreateFunc</a>(</div>
-<div class="line">                [<span class="keyword">this</span>]() -&gt; QWidget*</div>
-<div class="line">                {</div>
-<div class="line">                    <span class="keywordflow">return</span> <span class="keyword">new</span> MyConfigWidget(...);</div>
-<div class="line">                });</div>
-<div class="line">    }</div>
-<div class="line">    ...</div>
-<div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1PluginProperties_html_a594a32782ed0a0e101577f2f817b73ab"><div class="ttname"><a href="classcc__tools__qt_1_1PluginProperties.html#a594a32782ed0a0e101577f2f817b73ab">cc_tools_qt::PluginProperties::setConfigWidgetCreateFunc</a></div><div class="ttdeci">PluginProperties &amp; setConfigWidgetCreateFunc(ConfigWidgetCreateFunc &amp;&amp;func)</div><div class="ttdoc">Assign callback for configuration widget creation.</div></div>
-</div><!-- fragment --><p> <b>NOTE</b>, that the callback returns dynamically allocated widget object, which will be <b>owned</b> by the running application. The plugin does <b>NOT</b> need to store the pointer and delete it later.</p>
-<h2><a class="anchor" id="page_plugin_properties_gui_actions"></a>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html_a44e45de9e7f1786b49bd46ad4ef890eb"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html#a44e45de9e7f1786b49bd46ad4ef890eb">cc_tools_qt::ToolsPlugin::createConfigurationWidgetImpl</a></div><div class="ttdeci">virtual QWidget * createConfigurationWidgetImpl()</div><div class="ttdoc">Create configuration widget.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.cpp:180</div></div>
+</div><!-- fragment --><p> <b>NOTE</b>, that the member function returns dynamically allocated widget object, which will be <b>owned</b> by the running application. The plugin does <b>NOT</b> need to store the pointer and delete it later.</p>
+<h2><a class="anchor" id="page_plugin_gui_actions"></a>
 GUI Actions</h2>
-<p>For user's convenience, the plugin may also create multiple <a href="http://doc.qt.io/qt-5/qaction.html">QAction</a> objects. This objects will be inserted into main toolbar of the GUI application allowing users to perform quick updates / notifications to the running plugins. Use <a class="el" href="classcc__tools__qt_1_1PluginProperties.html#a21bda6aee7504beb2502f46dd1f8f54a" title="Assign callback for list of QAction allocation.">cc_tools_qt::PluginProperties::setGuiActionsCreateFunc()</a> function to set the callback. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1Plugin.html">cc_tools_qt::Plugin</a></div>
+<p>For user's convenience, the plugin may also create multiple <a href="http://doc.qt.io/qt-5/qaction.html">QAction</a> objects. This objects will be inserted into main toolbar of the GUI application allowing users to perform quick updates / notifications to the running plugins. To provide such functionality override <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html#aa85a8819d85bb28efd014e8d482363a1">createGuiActionsImpl()</a> function; </p><div class="fragment"><div class="line"><span class="keyword">class </span>MyPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div>
 <div class="line">{</div>
 <div class="line">    ...</div>
-<div class="line">public:</div>
-<div class="line">    MyPlugin()</div>
-<div class="line">    {</div>
-<div class="line">        <a class="code hl_function" href="classcc__tools__qt_1_1Plugin.html#af72273227ee7b9e978a6903fdff77a51">pluginProperties</a>()</div>
-<div class="line">            .<a class="code hl_function" href="classcc__tools__qt_1_1PluginProperties.html#a21bda6aee7504beb2502f46dd1f8f54a">setGuiActionsCreateFunc</a>(...);</div>
+<div class="line">protected:</div>
+<div class="line">    <span class="keyword">virtual</span> ListOfGuiActions <a class="code hl_function" href="classcc__tools__qt_1_1ToolsPlugin.html#aa85a8819d85bb28efd014e8d482363a1">createGuiActionsImpl</a>()<span class="keyword"> override</span></div>
+<div class="line"><span class="keyword">    </span>{</div>
+<div class="line">        <span class="keywordflow">return</span></div>
+<div class="line">            ListOfGuiActions{</div>
+<div class="line">                <span class="keyword">new</span> QAction(...),</div>
+<div class="line">                <span class="keyword">new</span> QAction(...)</div>
+<div class="line">            };</div>
 <div class="line">    }</div>
-<div class="line">    ...</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1PluginProperties_html_a21bda6aee7504beb2502f46dd1f8f54a"><div class="ttname"><a href="classcc__tools__qt_1_1PluginProperties.html#a21bda6aee7504beb2502f46dd1f8f54a">cc_tools_qt::PluginProperties::setGuiActionsCreateFunc</a></div><div class="ttdeci">PluginProperties &amp; setGuiActionsCreateFunc(GuiActionsCreateFunc &amp;&amp;func)</div><div class="ttdoc">Assign callback for list of QAction allocation.</div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html_aa85a8819d85bb28efd014e8d482363a1"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html#aa85a8819d85bb28efd014e8d482363a1">cc_tools_qt::ToolsPlugin::createGuiActionsImpl</a></div><div class="ttdeci">virtual ListOfGuiActions createGuiActionsImpl()</div><div class="ttdoc">Create GUI actions.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.cpp:185</div></div>
+</div><!-- fragment --><p> Similar to the configuration widget the action objects are owned by the running application, no need to delete them explicitly. </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

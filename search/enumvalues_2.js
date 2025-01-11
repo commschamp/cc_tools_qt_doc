@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['invalid_0',['Invalid',['../classcc__tools__qt_1_1Message.html#a2d84dddb3997e283179c16649694d634a4bbb8f967da6d1a610596d7257179c2b',1,'cc_tools_qt::Message']]],
-  ['invalidmsgdata_1',['InvalidMsgData',['../namespacecc__tools__qt.html#a700a291f5700cb184c0ee39626887e84af8ae6974f1ae12f9dd119049c9c47ebb',1,'cc_tools_qt']]],
-  ['invalidmsgid_2',['InvalidMsgId',['../namespacecc__tools__qt.html#a700a291f5700cb184c0ee39626887e84aa3715f4b800299cfe6c930f0dd998aab',1,'cc_tools_qt']]]
+  ['nochange_0',['NoChange',['../classcc__tools__qt_1_1ToolsProtocol.html#af968a17c3d9ae9a19eb4690635955768a4bac8cdf0a968472b519b3b295d0d48b',1,'cc_tools_qt::ToolsProtocol']]],
+  ['numofvalues_1',['NumOfValues',['../classcc__tools__qt_1_1ToolsMessage.html#afb6b64e2c15ce8a4b8962c16a41265c3a0bb4f6beda4f34c57166e6c1e14eb6f7',1,'cc_tools_qt::ToolsMessage']]]
 ];

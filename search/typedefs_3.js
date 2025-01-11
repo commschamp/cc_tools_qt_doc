@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['datainfoptr_0',['DataInfoPtr',['../namespacecc__tools__qt.html#ac0ac73d5a1975385f1b9804aa22698da',1,'cc_tools_qt']]],
-  ['datainfoslist_1',['DataInfosList',['../classcc__tools__qt_1_1Protocol.html#ae1ed20db6d6371d320cff7c54e4ed638',1,'cc_tools_qt::Protocol']]],
-  ['datareceivedcallback_2',['DataReceivedCallback',['../classcc__tools__qt_1_1Socket.html#ad4a986438bb08b1b3247255218115bdc',1,'cc_tools_qt::Socket']]],
-  ['dataseq_3',['dataseq',['../structcc__tools__qt_1_1DataInfo.html#a9e06b31a6233f4603cb83e71f6e34842',1,'cc_tools_qt::DataInfo::DataSeq'],['../classcc__tools__qt_1_1Message.html#a63b758b13ecc927ee297f788fcb9c59c',1,'cc_tools_qt::Message::DataSeq']]],
-  ['datatosendcallback_4',['DataToSendCallback',['../classcc__tools__qt_1_1Filter.html#a67db171263bfc6ee9f62f4b456ee12c7',1,'cc_tools_qt::Filter']]]
+  ['propertiesmap_0',['PropertiesMap',['../structcc__tools__qt_1_1ToolsDataInfo.html#a374b939fef6e9325246a165b3f8b477b',1,'cc_tools_qt::ToolsDataInfo']]],
+  ['protmsg_1',['ProtMsg',['../classcc__tools__qt_1_1ToolsMessageBase.html#ac779bed75b00a5d18defd98fe4d32fe9',1,'cc_tools_qt::ToolsMessageBase']]],
+  ['ptr_2',['Ptr',['../classcc__tools__qt_1_1ToolsMessage.html#abd85641e9ac353ffd5ab301c70cb7354',1,'cc_tools_qt::ToolsMessage']]]
 ];

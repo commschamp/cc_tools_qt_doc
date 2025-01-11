@@ -1,11 +1,10 @@
 var searchData=
 [
-  ['values_0',['values',['../classcc__tools__qt_1_1property_1_1field_1_1EnumValue.html#a4e2a9681a79ce6eb1a11d6b7c9723b1b',1,'cc_tools_qt::property::field::EnumValue']]],
-  ['variant_1',['variant',['../classcc__tools__qt_1_1property_1_1field_1_1Variant.html',1,'cc_tools_qt::property::field::Variant'],['../classcc__tools__qt_1_1property_1_1field_1_1Variant.html#aa412d1d3138a03aab1053ea0ab8273a3',1,'cc_tools_qt::property::field::Variant::Variant()'],['../classcc__tools__qt_1_1property_1_1field_1_1Variant.html#a5ddcc445f1d5ef025715cca62fc43d29',1,'cc_tools_qt::property::field::Variant::Variant(const Variant &amp;)'],['../classcc__tools__qt_1_1property_1_1field_1_1Variant.html#a7478272b951eeb881537c64f40656ac0',1,'cc_tools_qt::property::field::Variant::Variant(Variant &amp;&amp;)'],['../classcc__tools__qt_1_1property_1_1field_1_1Variant.html#a7cc34715adc90df87c929c7929e68193',1,'cc_tools_qt::property::field::Variant::Variant(const QVariantMap &amp;props)'],['../classcc__tools__qt_1_1property_1_1field_1_1Variant.html#a005ef77baec54e474dd5a44a5dcc0b7e',1,'cc_tools_qt::property::field::Variant::Variant(const QVariant &amp;props)']]],
-  ['version_2',['version',['../namespacecc__tools__qt.html#a7924d20e5ea66a641eece44707eb96f4',1,'cc_tools_qt']]],
-  ['version_2eh_3',['version.h',['../version_8h.html',1,'']]],
-  ['versioncreate_4',['versionCreate',['../namespacecc__tools__qt.html#aa12d8a43dc5a8e505004d0f68fc9ceac',1,'cc_tools_qt']]],
-  ['versionmajor_5',['versionMajor',['../namespacecc__tools__qt.html#af136c5246e84db948ea258056ce0365c',1,'cc_tools_qt']]],
-  ['versionminor_6',['versionMinor',['../namespacecc__tools__qt.html#a0da893f03da229d7b231b541eb5c27e4',1,'cc_tools_qt']]],
-  ['versionpatch_7',['versionPatch',['../namespacecc__tools__qt.html#a5cc9e182c3ef440c027ce868a21a4bc3',1,'cc_tools_qt']]]
+  ['_7etoolsfilter_0',['~ToolsFilter',['../classcc__tools__qt_1_1ToolsFilter.html#a9421b85c8fb5938d2a296789fe5eb09f',1,'cc_tools_qt::ToolsFilter']]],
+  ['_7etoolsmessage_1',['~ToolsMessage',['../classcc__tools__qt_1_1ToolsMessage.html#a257351c54d03f4d1c15580cbfde40757',1,'cc_tools_qt::ToolsMessage']]],
+  ['_7etoolsmessagebase_2',['~ToolsMessageBase',['../classcc__tools__qt_1_1ToolsMessageBase.html#afbcaf64e87ecdd5b3a19987f4b263b2d',1,'cc_tools_qt::ToolsMessageBase']]],
+  ['_7etoolsplugin_3',['~ToolsPlugin',['../classcc__tools__qt_1_1ToolsPlugin.html#a38f2ed0b464185d9ee2043440ffad7bf',1,'cc_tools_qt::ToolsPlugin']]],
+  ['_7etoolsprotocol_4',['~ToolsProtocol',['../classcc__tools__qt_1_1ToolsProtocol.html#a9b6e3a71fa68a7cb61264cd4875e09bf',1,'cc_tools_qt::ToolsProtocol']]],
+  ['_7etoolssocket_5',['~ToolsSocket',['../classcc__tools__qt_1_1ToolsSocket.html#a18f85cdbe28641cba9b5097fa736c900',1,'cc_tools_qt::ToolsSocket']]],
+  ['_7etoolstransportmessagebase_6',['~ToolsTransportMessageBase',['../classcc__tools__qt_1_1ToolsTransportMessageBase.html#aa1a35a17c1157fac8dea3422cfdaf648',1,'cc_tools_qt::ToolsTransportMessageBase']]]
 ];

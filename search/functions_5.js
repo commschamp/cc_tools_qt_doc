@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['field_0',['field',['../classcc__tools__qt_1_1property_1_1field_1_1Optional.html#a9e0de610a3748337a4966c346614b307',1,'cc_tools_qt::property::field::Optional::field() const'],['../classcc__tools__qt_1_1property_1_1field_1_1Optional.html#a0676397bcef88940191b117e634e35cb',1,'cc_tools_qt::property::field::Optional::field(QVariantMap &amp;&amp;fieldProps)'],['../classcc__tools__qt_1_1property_1_1field_1_1Optional.html#ad9fc6ebf846de333be847747fce27315',1,'cc_tools_qt::property::field::Optional::field(const QVariantMap &amp;fieldProps)']]],
-  ['fieldsproperties_1',['fieldsProperties',['../classcc__tools__qt_1_1Message.html#a65aca380504a7fcccd3574796e2bfac5',1,'cc_tools_qt::Message']]],
-  ['fieldspropertiesimpl_2',['fieldsPropertiesImpl',['../classcc__tools__qt_1_1Message.html#abad8fba8f55acc1ee18f226aa4d617ff',1,'cc_tools_qt::Message']]],
-  ['filter_3',['Filter',['../classcc__tools__qt_1_1Filter.html#a73b1ab2322b03ab76cd55e6bdd7cb9a0',1,'cc_tools_qt::Filter']]],
-  ['floatvalue_4',['floatvalue',['../classcc__tools__qt_1_1property_1_1field_1_1FloatValue.html#ad2568ec51a75fd6e9f6386a5cead2cfc',1,'cc_tools_qt::property::field::FloatValue::FloatValue()'],['../classcc__tools__qt_1_1property_1_1field_1_1FloatValue.html#aea79e4283c74aba02e079438f4fbad29',1,'cc_tools_qt::property::field::FloatValue::FloatValue(const FloatValue &amp;)'],['../classcc__tools__qt_1_1property_1_1field_1_1FloatValue.html#ad9de119f5cf22c5f9f1b56cc2a75a2e4',1,'cc_tools_qt::property::field::FloatValue::FloatValue(FloatValue &amp;&amp;)'],['../classcc__tools__qt_1_1property_1_1field_1_1FloatValue.html#a73a3fed322281eb530249b9b564b287a',1,'cc_tools_qt::property::field::FloatValue::FloatValue(const QVariantMap &amp;props)'],['../classcc__tools__qt_1_1property_1_1field_1_1FloatValue.html#a7384d4b3d142d844cbb52f074506d6ac',1,'cc_tools_qt::property::field::FloatValue::FloatValue(const QVariant &amp;props)']]]
+  ['idasstring_0',['idAsString',['../classcc__tools__qt_1_1ToolsMessage.html#a014c40127870bc55814439fb77940904',1,'cc_tools_qt::ToolsMessage']]],
+  ['idasstringimpl_1',['idAsStringImpl',['../classcc__tools__qt_1_1ToolsMessage.html#a1a1067848efae2b2fc646a52ad68ffc5',1,'cc_tools_qt::ToolsMessage']]],
+  ['isrunning_2',['isRunning',['../classcc__tools__qt_1_1ToolsSocket.html#aa38af71c56be146086e776597d8b33d3',1,'cc_tools_qt::ToolsSocket']]],
+  ['issocketconnected_3',['isSocketConnected',['../classcc__tools__qt_1_1ToolsSocket.html#a234c8afdec79db2232412e284e56931b',1,'cc_tools_qt::ToolsSocket']]],
+  ['isvalid_4',['isValid',['../classcc__tools__qt_1_1ToolsMessage.html#a03b46b456a0c3b1fb56fe8c1a0aa666f',1,'cc_tools_qt::ToolsMessage']]],
+  ['isvalidimpl_5',['isvalidimpl',['../classcc__tools__qt_1_1ToolsMessage.html#a5785acc64ddb54fca86a4b2d8e3cc5e4',1,'cc_tools_qt::ToolsMessage::isValidImpl()'],['../classcc__tools__qt_1_1ToolsMessageBase.html#a9f6e245cba97a16b0c88dba8eb82d0fb',1,'cc_tools_qt::ToolsMessageBase::isValidImpl()']]]
 ];

@@ -1,9 +1,4 @@
 var searchData=
 [
-  ['plugin_0',['Plugin',['../classcc__tools__qt_1_1Plugin.html#a1ddecd2689fd61c28fb070fce59f7a60',1,'cc_tools_qt::Plugin']]],
-  ['pluginproperties_1',['pluginproperties',['../classcc__tools__qt_1_1PluginProperties.html#ab70644c32c4973f2bde711b7bc3838eb',1,'cc_tools_qt::PluginProperties::PluginProperties()'],['../classcc__tools__qt_1_1Plugin.html#af72273227ee7b9e978a6903fdff77a51',1,'cc_tools_qt::Plugin::pluginProperties()']]],
-  ['prefixname_2',['prefixname',['../classcc__tools__qt_1_1property_1_1field_1_1ArrayList.html#ae5fdf243f4ee6abbcd69f33d461543e4',1,'cc_tools_qt::property::field::ArrayList::prefixName() const'],['../classcc__tools__qt_1_1property_1_1field_1_1ArrayList.html#a3d2ab092b85f5488d9e698cad960bb80',1,'cc_tools_qt::property::field::ArrayList::prefixName(const QString &amp;nameParam)']]],
-  ['protocolbase_3',['ProtocolBase',['../classcc__tools__qt_1_1ProtocolBase.html#a873905e9a9e5e621947a16a31bc5101a',1,'cc_tools_qt::ProtocolBase']]],
-  ['protocolmessagebase_4',['protocolmessagebase',['../classcc__tools__qt_1_1ProtocolMessageBase.html#aacd21b0c291e85eaa02e67c3bfa0c338',1,'cc_tools_qt::ProtocolMessageBase::ProtocolMessageBase()=default'],['../classcc__tools__qt_1_1ProtocolMessageBase.html#aa8274828d3d2b50336ba2c9c6a02bf57',1,'cc_tools_qt::ProtocolMessageBase::ProtocolMessageBase(const ProtocolMessageBase &amp;)=default'],['../classcc__tools__qt_1_1ProtocolMessageBase.html#ad7e42382e2eed2fdce9681a5f615a11d',1,'cc_tools_qt::ProtocolMessageBase::ProtocolMessageBase(ProtocolMessageBase &amp;&amp;)=default']]],
-  ['protocolstack_5',['protocolstack',['../classcc__tools__qt_1_1ProtocolBase.html#a96a4f2a4be74fd01700680516bfb5b9b',1,'cc_tools_qt::ProtocolBase::protocolStack()'],['../classcc__tools__qt_1_1ProtocolBase.html#a99e8ae103a7b17e9d700d8da7249f41c',1,'cc_tools_qt::ProtocolBase::protocolStack() const']]]
+  ['updatemessage_0',['updateMessage',['../classcc__tools__qt_1_1ToolsProtocol.html#ab2f5994fb812b8e88f063de20469988c',1,'cc_tools_qt::ToolsProtocol']]]
 ];

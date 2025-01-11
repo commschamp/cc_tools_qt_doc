@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['library_0',['cc_tools_qt Library',['../index.html',1,'']]],
-  ['listoffilters_1',['listoffilters',['../classcc__tools__qt_1_1Plugin.html#a20588184dd3be1974b7e4f46fc90b8c0',1,'cc_tools_qt::Plugin::ListOfFilters'],['../classcc__tools__qt_1_1PluginProperties.html#ab2ffb746eaf727fac8b230213d9f3b73',1,'cc_tools_qt::PluginProperties::ListOfFilters']]],
-  ['listofguiactions_2',['listofguiactions',['../classcc__tools__qt_1_1Plugin.html#a2439a134615b11048acfa0d31c8fcb36',1,'cc_tools_qt::Plugin::ListOfGuiActions'],['../classcc__tools__qt_1_1PluginProperties.html#a25c497c66c430d38cdc29a5788d7447c',1,'cc_tools_qt::PluginProperties::ListOfGuiActions']]]
+  ['name_0',['name',['../classcc__tools__qt_1_1ToolsMessage.html#af40c5baacb667f01cd5e5267421c2130',1,'cc_tools_qt::ToolsMessage::name()'],['../classcc__tools__qt_1_1ToolsProtocol.html#a55ab5d0b6cebd505e27d9c8ccf000373',1,'cc_tools_qt::ToolsProtocol::name()']]],
+  ['nameimpl_1',['nameimpl',['../classcc__tools__qt_1_1ToolsMessage.html#a184b901ac1702a28924d0ac08cc21c6e',1,'cc_tools_qt::ToolsMessage::nameImpl()'],['../classcc__tools__qt_1_1ToolsMessageBase.html#a6b60c88bc4dcbc677b0f436c26c02948',1,'cc_tools_qt::ToolsMessageBase::nameImpl()'],['../classcc__tools__qt_1_1ToolsProtocol.html#a6cb4fe27f6d5dc94ab2d619cacd21d15',1,'cc_tools_qt::ToolsProtocol::nameImpl()'],['../classcc__tools__qt_1_1ToolsTransportMessageBase.html#aefc43311778fa57551b50f0fffee3777',1,'cc_tools_qt::ToolsTransportMessageBase::nameImpl()']]],
+  ['nochange_2',['NoChange',['../classcc__tools__qt_1_1ToolsProtocol.html#af968a17c3d9ae9a19eb4690635955768a4bac8cdf0a968472b519b3b295d0d48b',1,'cc_tools_qt::ToolsProtocol']]],
+  ['numericidimpl_3',['numericidimpl',['../classcc__tools__qt_1_1ToolsMessage.html#ab33e13386be77c492d61f583944eca2f',1,'cc_tools_qt::ToolsMessage::numericIdImpl()'],['../classcc__tools__qt_1_1ToolsMessageBase.html#af8851a8cb608c935eeec26e389c452fb',1,'cc_tools_qt::ToolsMessageBase::numericIdImpl()'],['../classcc__tools__qt_1_1ToolsTransportMessageBase.html#a4b83755030d50fbcd49efbf18251e61f',1,'cc_tools_qt::ToolsTransportMessageBase::numericIdImpl()']]],
+  ['numofvalues_4',['NumOfValues',['../classcc__tools__qt_1_1ToolsMessage.html#afb6b64e2c15ce8a4b8962c16a41265c3a0bb4f6beda4f34c57166e6c1e14eb6f7',1,'cc_tools_qt::ToolsMessage']]]
 ];

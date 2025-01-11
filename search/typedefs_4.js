@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['elemslist_0',['elemslist',['../classcc__tools__qt_1_1property_1_1field_1_1EnumValue.html#a9d71c9a15adff87eb87dd97f02ed97b9',1,'cc_tools_qt::property::field::EnumValue::ElemsList'],['../classcc__tools__qt_1_1property_1_1field_1_1ArrayList.html#a31a26c67062d066c7079096d7c4436c2',1,'cc_tools_qt::property::field::ArrayList::ElemsList']]],
-  ['elemtype_1',['ElemType',['../classcc__tools__qt_1_1property_1_1field_1_1EnumValue.html#acc5692efe2ad431d38ce85fbc4398632',1,'cc_tools_qt::property::field::EnumValue']]],
-  ['errorreportcallback_2',['errorreportcallback',['../classcc__tools__qt_1_1Filter.html#afae6f16fba7cb5c5a938f134291ef3b7',1,'cc_tools_qt::Filter::ErrorReportCallback'],['../classcc__tools__qt_1_1Protocol.html#ac841e6f42ce81be20f47d042bcef4fe9',1,'cc_tools_qt::Protocol::ErrorReportCallback'],['../classcc__tools__qt_1_1Socket.html#a3f12d645dfd92dc32ec81ee2b720d49b',1,'cc_tools_qt::Socket::ErrorReportCallback']]],
-  ['extrainfomsg_3',['ExtraInfoMsg',['../classcc__tools__qt_1_1ProtocolBase.html#ad680ebf52b460365bd94ae41550b7219',1,'cc_tools_qt::ProtocolBase']]]
+  ['timestamp_0',['Timestamp',['../structcc__tools__qt_1_1ToolsDataInfo.html#ade296be8fcd6a0a74fd2f80cd96dc319',1,'cc_tools_qt::ToolsDataInfo']]],
+  ['timestampclock_1',['TimestampClock',['../structcc__tools__qt_1_1ToolsDataInfo.html#ac08ca0bb74a46ecc1a103dd78a74fb0c',1,'cc_tools_qt::ToolsDataInfo']]],
+  ['toolsdatainfoptr_2',['ToolsDataInfoPtr',['../namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1',1,'cc_tools_qt']]],
+  ['toolsfilterptr_3',['ToolsFilterPtr',['../namespacecc__tools__qt.html#aa02d61545a36e643e84f077aa8e04dab',1,'cc_tools_qt']]],
+  ['toolsmessageptr_4',['ToolsMessagePtr',['../namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41',1,'cc_tools_qt']]],
+  ['toolsprotmsginterface_5',['ToolsProtMsgInterface',['../namespacecc__tools__qt.html#a04e8c60e2392650963fbf53208ca0cac',1,'cc_tools_qt']]],
+  ['toolsprotocolptr_6',['ToolsProtocolPtr',['../namespacecc__tools__qt.html#ae23a05cfaea795e096d48aae720b4f44',1,'cc_tools_qt']]],
+  ['toolssocketptr_7',['ToolsSocketPtr',['../namespacecc__tools__qt.html#ae7adccb7a6c1e5ce71d4efd4f0864e62',1,'cc_tools_qt']]]
 ];
