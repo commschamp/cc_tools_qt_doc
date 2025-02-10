@@ -185,45 +185,46 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    virtual <span class="keywordtype">void</span> applyInterPluginConfigImpl(const QVariantMap&amp; props);      </div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    <span class="keywordtype">void</span> setNameToMessageProperties(<a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    <span class="keywordtype">void</span> reportError(const QString&amp; str);  </div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="keywordtype">unsigned</span> getDebugOutputLevel() const;    </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    static <span class="keywordtype">void</span> setTransportToMessageProperties(<a class="code hl_typedef" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> transportMsg, <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    static <span class="keywordtype">void</span> setRawDataToMessageProperties(<a class="code hl_typedef" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> rawDataMsg, <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span> </div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="keywordtype">void</span> sendMessageRequest(<a class="code hl_typedef" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> msg);  </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span> </div>
-<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    <span class="keywordtype">void</span> reportInterPluginConfig(const QVariantMap&amp; props);      </div>
-<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordtype">unsigned</span> getDebugOutputLevel() const;    </div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    static <span class="keywordtype">void</span> setTransportToMessageProperties(<a class="code hl_typedef" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> transportMsg, <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    static <span class="keywordtype">void</span> setExtraInfoMsgToMessageProperties(<a class="code hl_typedef" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> extraInfoMsg, <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    static <a class="code hl_typedef" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> getExtraInfoMsgToMessageProperties(const <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    static QVariantMap getExtraInfoFromMessageProperties(const <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    static <span class="keywordtype">void</span> setExtraInfoToMessageProperties(const QVariantMap&amp; extraInfo, <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    static <span class="keywordtype">void</span> mergeExtraInfoToMessageProperties(const QVariantMap&amp; extraInfo, <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    static <span class="keywordtype">void</span> setForceExtraInfoExistenceToMessageProperties(<a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    static <span class="keywordtype">bool</span> getForceExtraInfoExistenceFromMessageProperties(const <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
 <div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    static <span class="keywordtype">void</span> setRawDataToMessageProperties(<a class="code hl_typedef" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> rawDataMsg, <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    static <span class="keywordtype">void</span> setExtraInfoMsgToMessageProperties(<a class="code hl_typedef" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> extraInfoMsg, <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
-<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    static <a class="code hl_typedef" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> getExtraInfoMsgToMessageProperties(const <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>protected slots:</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keywordtype">void</span> setNameToMessageProperties(<a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">void</span> reportError(const QString&amp; str);  </div>
 <div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    static QVariantMap getExtraInfoFromMessageProperties(const <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    static <span class="keywordtype">void</span> setExtraInfoToMessageProperties(const QVariantMap&amp; extraInfo, <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    static <span class="keywordtype">void</span> mergeExtraInfoToMessageProperties(const QVariantMap&amp; extraInfo, <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
-<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    static <span class="keywordtype">void</span> setForceExtraInfoExistenceToMessageProperties(<a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
-<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span> </div>
-<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    static <span class="keywordtype">bool</span> getForceExtraInfoExistenceFromMessageProperties(const <a class="code hl_class" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a>&amp; msg);</div>
-<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
-<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>private:</div>
-<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    struct InnerState;</div>
-<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    std::unique_ptr&lt;InnerState&gt; m_state;</div>
-<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>};</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>    <span class="keywordtype">void</span> sendMessageRequest(<a class="code hl_typedef" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> msg);  </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>    <span class="keywordtype">void</span> reportInterPluginConfig(const QVariantMap&amp; props);     </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span> </div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>private:</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    struct InnerState;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    std::unique_ptr&lt;InnerState&gt; m_state;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>};</div>
 </div>
-<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
-<div class="line"><a id="l00232" name="l00232"></a><span class="lineno"><a class="line" href="namespacecc__tools__qt.html#ae23a05cfaea795e096d48aae720b4f44">  232</a></span>using <a class="code hl_typedef" href="namespacecc__tools__qt.html#ae23a05cfaea795e096d48aae720b4f44">ToolsProtocolPtr</a> = std::shared_ptr&lt;<a class="code hl_class" href="classcc__tools__qt_1_1ToolsProtocol.html">ToolsProtocol</a>&gt;;</div>
-<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
-<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>}  <span class="comment">// namespace cc_tools_qt</span></div>
-<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span> </div>
-<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>Q_DECLARE_METATYPE(<a class="code hl_namespace" href="namespacecc__tools__qt.html">cc_tools_qt</a>::<a class="code hl_typedef" href="namespacecc__tools__qt.html#ae23a05cfaea795e096d48aae720b4f44">ToolsProtocolPtr</a>);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno"><a class="line" href="namespacecc__tools__qt.html#ae23a05cfaea795e096d48aae720b4f44">  233</a></span>using <a class="code hl_typedef" href="namespacecc__tools__qt.html#ae23a05cfaea795e096d48aae720b4f44">ToolsProtocolPtr</a> = std::shared_ptr&lt;<a class="code hl_class" href="classcc__tools__qt_1_1ToolsProtocol.html">ToolsProtocol</a>&gt;;</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>}  <span class="comment">// namespace cc_tools_qt</span></div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>Q_DECLARE_METATYPE(<a class="code hl_namespace" href="namespacecc__tools__qt.html">cc_tools_qt</a>::<a class="code hl_typedef" href="namespacecc__tools__qt.html#ae23a05cfaea795e096d48aae720b4f44">ToolsProtocolPtr</a>);</div>
 <div class="ttc" id="aclasscc__tools__qt_1_1ToolsMessage_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsMessage.html">cc_tools_qt::ToolsMessage</a></div><div class="ttdoc">Main interface class used by CommsChampion Tools to display and manipulate messages.</div><div class="ttdef"><b>Definition</b> ToolsMessage.h:44</div></div>
 <div class="ttc" id="aclasscc__tools__qt_1_1ToolsMessage_html_ad3992498eaa1b0bf1be44174e6464adf"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsMessage.html#ad3992498eaa1b0bf1be44174e6464adf">cc_tools_qt::ToolsMessage::DataSeq</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; DataSeq</div><div class="ttdoc">Type for sequence of raw bytes.</div><div class="ttdef"><b>Definition</b> ToolsMessage.h:51</div></div>
 <div class="ttc" id="aclasscc__tools__qt_1_1ToolsProtocol_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsProtocol.html">cc_tools_qt::ToolsProtocol</a></div><div class="ttdoc">Main polymorphic interface class for protocols.</div><div class="ttdef"><b>Definition</b> ToolsProtocol.h:44</div></div>
@@ -233,7 +234,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclasscc__tools__qt_1_1ToolsProtocol_html_af968a17c3d9ae9a19eb4690635955768"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsProtocol.html#af968a17c3d9ae9a19eb4690635955768">cc_tools_qt::ToolsProtocol::UpdateStatus</a></div><div class="ttdeci">UpdateStatus</div><div class="ttdoc">Status of message &quot;update&quot; operation.</div><div class="ttdef"><b>Definition</b> ToolsProtocol.h:55</div></div>
 <div class="ttc" id="anamespacecc__tools__qt_html"><div class="ttname"><a href="namespacecc__tools__qt.html">cc_tools_qt</a></div><div class="ttdoc">Main namespace for all classes / functions of the shared library.</div></div>
 <div class="ttc" id="anamespacecc__tools__qt_html_a0297e93cb19b022c612a0579c0de7aa1"><div class="ttname"><a href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">cc_tools_qt::ToolsDataInfoPtr</a></div><div class="ttdeci">std::shared_ptr&lt; ToolsDataInfo &gt; ToolsDataInfoPtr</div><div class="ttdoc">Pointer to ToolsDataInfo.</div><div class="ttdef"><b>Definition</b> ToolsDataInfo.h:57</div></div>
-<div class="ttc" id="anamespacecc__tools__qt_html_ae23a05cfaea795e096d48aae720b4f44"><div class="ttname"><a href="namespacecc__tools__qt.html#ae23a05cfaea795e096d48aae720b4f44">cc_tools_qt::ToolsProtocolPtr</a></div><div class="ttdeci">std::shared_ptr&lt; ToolsProtocol &gt; ToolsProtocolPtr</div><div class="ttdoc">Pointer to ToolsProtocol object.</div><div class="ttdef"><b>Definition</b> ToolsProtocol.h:232</div></div>
+<div class="ttc" id="anamespacecc__tools__qt_html_ae23a05cfaea795e096d48aae720b4f44"><div class="ttname"><a href="namespacecc__tools__qt.html#ae23a05cfaea795e096d48aae720b4f44">cc_tools_qt::ToolsProtocolPtr</a></div><div class="ttdeci">std::shared_ptr&lt; ToolsProtocol &gt; ToolsProtocolPtr</div><div class="ttdoc">Pointer to ToolsProtocol object.</div><div class="ttdef"><b>Definition</b> ToolsProtocol.h:233</div></div>
 <div class="ttc" id="anamespacecc__tools__qt_html_af6aa27330940e08fcecc5612362aaf41"><div class="ttname"><a href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">cc_tools_qt::ToolsMessagePtr</a></div><div class="ttdeci">std::shared_ptr&lt; ToolsMessage &gt; ToolsMessagePtr</div><div class="ttdoc">Smart pointer to ToolsMessage.</div><div class="ttdef"><b>Definition</b> ToolsMessage.h:163</div></div>
 <div class="ttc" id="astructcc__tools__qt_1_1ToolsDataInfo_html"><div class="ttname"><a href="structcc__tools__qt_1_1ToolsDataInfo.html">cc_tools_qt::ToolsDataInfo</a></div><div class="ttdoc">Information about incomming or outdoing data.</div><div class="ttdef"><b>Definition</b> ToolsDataInfo.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->

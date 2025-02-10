@@ -99,7 +99,7 @@ Receiving Inter-Plugin Configuration Request</h1>
 <div class="line">    ...</div>
 <div class="line">};</div>
 <div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div><div class="ttdoc">Interface class for plugin definition.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.h:42</div></div>
-<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html_a1a0b61d0e7f8c1d2c2d869267eeed453"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html#a1a0b61d0e7f8c1d2c2d869267eeed453">cc_tools_qt::ToolsPlugin::applyInterPluginConfigImpl</a></div><div class="ttdeci">virtual void applyInterPluginConfigImpl(const QVariantMap &amp;props)</div><div class="ttdoc">Polymorphic inter-plugin configuration application.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.cpp:161</div></div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html_a1a0b61d0e7f8c1d2c2d869267eeed453"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html#a1a0b61d0e7f8c1d2c2d869267eeed453">cc_tools_qt::ToolsPlugin::applyInterPluginConfigImpl</a></div><div class="ttdeci">virtual void applyInterPluginConfigImpl(const QVariantMap &amp;props)</div><div class="ttdoc">Polymorphic inter-plugin configuration application.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.cpp:171</div></div>
 </div><!-- fragment --><p>In most cases the plugin configuration is handled inside the class extending the <a class="el" href="classcc__tools__qt_1_1ToolsSocket.html">socket</a>, <a class="el" href="classcc__tools__qt_1_1ToolsFilter.html">filter</a>, or <a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html">protocol</a>, then such class can override its <a class="el" href="classcc__tools__qt_1_1ToolsSocket.html#a56ca339e74d0e8b9a67c7c4d226bba37">applyInterPluginConfigImpl()</a> member function while the plugin's <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html#a1a0b61d0e7f8c1d2c2d869267eeed453">applyInterPluginConfigImpl()</a> one can redirect the request. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MySocket : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1ToolsSocket.html">cc_tools_qt::ToolsSocket</a></div>
 <div class="line">{</div>
 <div class="line">    ...</div>
@@ -145,11 +145,11 @@ Sending Inter-Plugin Configuration Request</h1>
 <div class="line">        QVariantMap props;</div>
 <div class="line">        prop[<span class="stringliteral">&quot;some_prop&quot;</span>] = QVariant::fromValue(QString(<span class="stringliteral">&quot;some_value&quot;</span>));</div>
 <div class="line">        prop[<span class="stringliteral">&quot;some_other_prop&quot;</span>] = QVariant::fromValue(123);</div>
-<div class="line">        <a class="code hl_function" href="classcc__tools__qt_1_1ToolsPlugin.html#ab6d8150c4c46d766c2794e052e72ea91">reportInterPluginConfig</a>(props);</div>
+<div class="line">        <a class="code hl_slot" href="classcc__tools__qt_1_1ToolsPlugin.html#ab6d8150c4c46d766c2794e052e72ea91">reportInterPluginConfig</a>(props);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html_ab6d8150c4c46d766c2794e052e72ea91"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html#ab6d8150c4c46d766c2794e052e72ea91">cc_tools_qt::ToolsPlugin::reportInterPluginConfig</a></div><div class="ttdeci">void reportInterPluginConfig(const QVariantMap &amp;props)</div><div class="ttdoc">Report inter-plugin configuration.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.cpp:190</div></div>
-</div><!-- fragment --><p>In case the inter-plugin configuration event is initiated inside the class extending the <a class="el" href="classcc__tools__qt_1_1ToolsSocket.html">socket</a>, <a class="el" href="classcc__tools__qt_1_1ToolsFilter.html">filter</a>, or <a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html">protocol</a>, then such class can use inherited <a class="el" href="classcc__tools__qt_1_1ToolsSocket.html#ab9752c9930ed49d5541cb86fc419f787">cc_tools_qt::ToolsSocket::reportInterPluginConfig()</a> member function. The <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html">plugin</a> class will connect the signals and emit its own <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html#a0b9540e7808c482a7ae4c646f78f9db9">sigInterPluginConfigReport()</a>. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MySocket : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1ToolsSocket.html">cc_tools_qt::ToolsSocket</a></div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html_ab6d8150c4c46d766c2794e052e72ea91"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html#ab6d8150c4c46d766c2794e052e72ea91">cc_tools_qt::ToolsPlugin::reportInterPluginConfig</a></div><div class="ttdeci">void reportInterPluginConfig(const QVariantMap &amp;props)</div><div class="ttdoc">Report inter-plugin configuration.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.cpp:200</div></div>
+</div><!-- fragment --><p>In case the inter-plugin configuration event is initiated inside the class extending the <a class="el" href="classcc__tools__qt_1_1ToolsSocket.html">socket</a>, <a class="el" href="classcc__tools__qt_1_1ToolsFilter.html">filter</a>, or <a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html">protocol</a>, then such class can use inherited <a class="el" href="classcc__tools__qt_1_1ToolsSocket.html#ab9752c9930ed49d5541cb86fc419f787">cc_tools_qt::ToolsSocket::reportInterPluginConfig()</a> member function. The <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html">plugin</a> class will connect the signals automatically and emit its own <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html#a0b9540e7808c482a7ae4c646f78f9db9">sigInterPluginConfigReport()</a>. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MySocket : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1ToolsSocket.html">cc_tools_qt::ToolsSocket</a></div>
 <div class="line">{</div>
 <div class="line">    ...</div>
 <div class="line">private:</div>
@@ -158,11 +158,49 @@ Sending Inter-Plugin Configuration Request</h1>
 <div class="line">        QVariantMap props;</div>
 <div class="line">        prop[<span class="stringliteral">&quot;some_prop&quot;</span>] = QVariant::fromValue(QString(<span class="stringliteral">&quot;some_value&quot;</span>));</div>
 <div class="line">        prop[<span class="stringliteral">&quot;some_other_prop&quot;</span>] = QVariant::fromValue(123);</div>
-<div class="line">        <a class="code hl_function" href="classcc__tools__qt_1_1ToolsSocket.html#ab9752c9930ed49d5541cb86fc419f787">reportInterPluginConfig</a>(props);</div>
+<div class="line">        <a class="code hl_slot" href="classcc__tools__qt_1_1ToolsSocket.html#ab9752c9930ed49d5541cb86fc419f787">reportInterPluginConfig</a>(props);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html_ab9752c9930ed49d5541cb86fc419f787"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html#ab9752c9930ed49d5541cb86fc419f787">cc_tools_qt::ToolsSocket::reportInterPluginConfig</a></div><div class="ttdeci">void reportInterPluginConfig(const QVariantMap &amp;props)</div><div class="ttdoc">Report inter-plugin configuration.</div><div class="ttdef"><b>Definition</b> ToolsSocket.cpp:207</div></div>
-</div><!-- fragment --> </div></div><!-- contents -->
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html_ab9752c9930ed49d5541cb86fc419f787"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html#ab9752c9930ed49d5541cb86fc419f787">cc_tools_qt::ToolsSocket::reportInterPluginConfig</a></div><div class="ttdeci">void reportInterPluginConfig(const QVariantMap &amp;props)</div><div class="ttdoc">Report inter-plugin configuration.</div><div class="ttdef"><b>Definition</b> ToolsSocket.cpp:221</div></div>
+</div><!-- fragment --><p><b>HOWEVER</b>, depending on the implementation of the actual plugin, the <a class="el" href="classcc__tools__qt_1_1ToolsSocket.html">socket</a>, <a class="el" href="classcc__tools__qt_1_1ToolsFilter.html">filter</a>, or <a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html">protocol</a> objects may be created before the the <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a> calls appropriate <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html#a8291af99035982c2192f161a624c4ea0">createSocketImpl()</a>, <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html#ab4228a7288e06eb13850f5f97142357a">createFilterImpl()</a>, or <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html#af8a34424d37828716df26a52c36ec6bf">createProtocolImpl()</a> to get hold on the appropriate object, and may require an ability to still initiate inter-plugin configuration. In such case the the actual plugin is expected to explicitly connect appropriate signal: </p><div class="fragment"><div class="line"><span class="keyword">class </span>MySocketPlugin : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div>
+<div class="line">{</div>
+<div class="line">    ...</div>
+<div class="line">protected:</div>
+<div class="line">    <span class="keyword">virtual</span> ToolsSocketPtr <a class="code hl_function" href="classcc__tools__qt_1_1ToolsPlugin.html#a8291af99035982c2192f161a624c4ea0">createSocketImpl</a>()</div>
+<div class="line">    {</div>
+<div class="line">        createSocketIfNeeded();</div>
+<div class="line">        <span class="keywordflow">return</span> m_socket;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keyword">virtual</span> QWidget* <a class="code hl_function" href="classcc__tools__qt_1_1ToolsPlugin.html#a44e45de9e7f1786b49bd46ad4ef890eb">createConfigurationWidgetImpl</a>()</div>
+<div class="line">    {</div>
+<div class="line">        createSocketIfNeeded();</div>
+<div class="line">        <span class="keyword">auto</span> widget = ... <span class="comment">// Create widget and connect its signals</span></div>
+<div class="line">        <span class="keywordflow">return</span> widget;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">    <span class="keywordtype">void</span> createSocketIfNeeded()</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">if</span> (m_socket) {</div>
+<div class="line">            <span class="keywordflow">return</span>;</div>
+<div class="line">        }</div>
+<div class="line"> </div>
+<div class="line">        m_socket.reset(<span class="keyword">new</span> MySocket);</div>
+<div class="line">        connect(</div>
+<div class="line">            m_socket.get(), &amp;<a class="code hl_signal" href="classcc__tools__qt_1_1ToolsSocket.html#aa6efe3bac7ff5ad0320c62ac33ddbf88">cc_tools_qt::ToolsSocket::sigInterPluginConfigReport</a>,</div>
+<div class="line">            <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="classcc__tools__qt_1_1ToolsPlugin.html#ab6d8150c4c46d766c2794e052e72ea91">cc_tools_qt::ToolsPlugin::reportInterPluginConfig</a></div>
+<div class="line">        );</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span></div>
+<div class="line">    std::shared_ptr&lt;MySocket&gt; m_socket;</div>
+<div class="line">};</div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html_a44e45de9e7f1786b49bd46ad4ef890eb"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html#a44e45de9e7f1786b49bd46ad4ef890eb">cc_tools_qt::ToolsPlugin::createConfigurationWidgetImpl</a></div><div class="ttdeci">virtual QWidget * createConfigurationWidgetImpl()</div><div class="ttdoc">Create configuration widget.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.cpp:190</div></div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html_a8291af99035982c2192f161a624c4ea0"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html#a8291af99035982c2192f161a624c4ea0">cc_tools_qt::ToolsPlugin::createSocketImpl</a></div><div class="ttdeci">virtual ToolsSocketPtr createSocketImpl()</div><div class="ttdoc">Create socket object.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.cpp:175</div></div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html_aa6efe3bac7ff5ad0320c62ac33ddbf88"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html#aa6efe3bac7ff5ad0320c62ac33ddbf88">cc_tools_qt::ToolsSocket::sigInterPluginConfigReport</a></div><div class="ttdeci">void sigInterPluginConfigReport(const QVariantMap &amp;props)</div><div class="ttdoc">Signal to report inter-plugin configuration.</div></div>
+</div><!-- fragment --><p>Note that the automatic connection of the <a class="el" href="classcc__tools__qt_1_1ToolsSocket.html#aa6efe3bac7ff5ad0320c62ac33ddbf88">cc_tools_qt::ToolsSocket::sigInterPluginConfigReport</a>, <a class="el" href="classcc__tools__qt_1_1ToolsFilter.html#a8ca4a6c513aed3636c4edd31e740a2ce">cc_tools_qt::ToolsFilter::sigInterPluginConfigReport</a>, <a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#ae59022a640183eda05fc8011bf507ef8">cc_tools_qt::ToolsProtocol::sigInterPluginConfigReport</a> signals to the <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html#a0b9540e7808c482a7ae4c646f78f9db9">cc_tools_qt::ToolsPlugin::sigInterPluginConfigReport</a> signal mentioned earlier happens <b>ONLY</b> when the deriving plugin class does <b>NOT</b> perform such a connection (to avoid duplication). </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

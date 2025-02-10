@@ -78,6 +78,7 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-slots">Protected Slots</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="classcc__tools__qt_1_1ToolsProtocol-members.html">List of all members</a>  </div>
@@ -168,6 +169,21 @@ ToolsMessagesList&#160;</td><td class="memItemRight" valign="bottom"><b>createAl
 <tr class="memdesc:ace9be93b8bacf5d9cc9432490903b2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serialise message.  <br /></td></tr>
 <tr class="separator:ace9be93b8bacf5d9cc9432490903b2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-slots" name="pro-slots"></a>
+Protected Slots</h2></td></tr>
+<tr class="memitem:a520d286269ba65d2431b1aafc3fdc0f8" id="r_a520d286269ba65d2431b1aafc3fdc0f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a520d286269ba65d2431b1aafc3fdc0f8">reportError</a> (const QString &amp;str)</td></tr>
+<tr class="memdesc:a520d286269ba65d2431b1aafc3fdc0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report operation error.  <br /></td></tr>
+<tr class="separator:a520d286269ba65d2431b1aafc3fdc0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d18b04ac7b3d65446450efe843aa90d" id="r_a8d18b04ac7b3d65446450efe843aa90d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a8d18b04ac7b3d65446450efe843aa90d">reportInterPluginConfig</a> (const QVariantMap &amp;props)</td></tr>
+<tr class="memdesc:a8d18b04ac7b3d65446450efe843aa90d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report inter-plugin configuration.  <br /></td></tr>
+<tr class="separator:a8d18b04ac7b3d65446450efe843aa90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c3867c3c1b917faccf4e690d46b38ea" id="r_a8c3867c3c1b917faccf4e690d46b38ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a8c3867c3c1b917faccf4e690d46b38ea">sendMessageRequest</a> (<a class="el" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> msg)</td></tr>
+<tr class="memdesc:a8c3867c3c1b917faccf4e690d46b38ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request a protocol message to be sent out.  <br /></td></tr>
+<tr class="separator:a8c3867c3c1b917faccf4e690d46b38ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a867ff5d6ff48de5ced2efd5e04caa48d" id="r_a867ff5d6ff48de5ced2efd5e04caa48d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a867ff5d6ff48de5ced2efd5e04caa48d">setNameToMessageProperties</a> (<a class="el" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a> &amp;msg)</td></tr>
+<tr class="memdesc:a867ff5d6ff48de5ced2efd5e04caa48d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to assign protocol name to message properties.  <br /></td></tr>
+<tr class="separator:a867ff5d6ff48de5ced2efd5e04caa48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a94951a63b6f47e052b2a8e101560371f" id="r_a94951a63b6f47e052b2a8e101560371f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a94951a63b6f47e052b2a8e101560371f">applyInterPluginConfigImpl</a> (const QVariantMap &amp;props)</td></tr>
@@ -186,18 +202,6 @@ unsigned&#160;</td><td class="memItemRight" valign="bottom"><b>getDebugOutputLev
 <tr class="memitem:a6cb4fe27f6d5dc94ab2d619cacd21d15" id="r_a6cb4fe27f6d5dc94ab2d619cacd21d15"><td class="memItemLeft" align="right" valign="top">virtual const QString &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a6cb4fe27f6d5dc94ab2d619cacd21d15">nameImpl</a> () const =0</td></tr>
 <tr class="memdesc:a6cb4fe27f6d5dc94ab2d619cacd21d15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic protocol name retrieval.  <br /></td></tr>
 <tr class="separator:a6cb4fe27f6d5dc94ab2d619cacd21d15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a520d286269ba65d2431b1aafc3fdc0f8" id="r_a520d286269ba65d2431b1aafc3fdc0f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a520d286269ba65d2431b1aafc3fdc0f8">reportError</a> (const QString &amp;str)</td></tr>
-<tr class="memdesc:a520d286269ba65d2431b1aafc3fdc0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report operation error.  <br /></td></tr>
-<tr class="separator:a520d286269ba65d2431b1aafc3fdc0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d18b04ac7b3d65446450efe843aa90d" id="r_a8d18b04ac7b3d65446450efe843aa90d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a8d18b04ac7b3d65446450efe843aa90d">reportInterPluginConfig</a> (const QVariantMap &amp;props)</td></tr>
-<tr class="memdesc:a8d18b04ac7b3d65446450efe843aa90d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Report inter-plugin configuration.  <br /></td></tr>
-<tr class="separator:a8d18b04ac7b3d65446450efe843aa90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c3867c3c1b917faccf4e690d46b38ea" id="r_a8c3867c3c1b917faccf4e690d46b38ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a8c3867c3c1b917faccf4e690d46b38ea">sendMessageRequest</a> (<a class="el" href="namespacecc__tools__qt.html#af6aa27330940e08fcecc5612362aaf41">ToolsMessagePtr</a> msg)</td></tr>
-<tr class="memdesc:a8c3867c3c1b917faccf4e690d46b38ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Request a protocol message to be sent out.  <br /></td></tr>
-<tr class="separator:a8c3867c3c1b917faccf4e690d46b38ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a867ff5d6ff48de5ced2efd5e04caa48d" id="r_a867ff5d6ff48de5ced2efd5e04caa48d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a867ff5d6ff48de5ced2efd5e04caa48d">setNameToMessageProperties</a> (<a class="el" href="classcc__tools__qt_1_1ToolsMessage.html">ToolsMessage</a> &amp;msg)</td></tr>
-<tr class="memdesc:a867ff5d6ff48de5ced2efd5e04caa48d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper function to assign protocol name to message properties.  <br /></td></tr>
-<tr class="separator:a867ff5d6ff48de5ced2efd5e04caa48d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a617d1669fb9773dab721527e44f6924f" id="r_a617d1669fb9773dab721527e44f6924f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html#a617d1669fb9773dab721527e44f6924f">socketConnectionReportImpl</a> (bool connected)</td></tr>
 <tr class="memdesc:a617d1669fb9773dab721527e44f6924f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Polymorphic processing of the socket connection report.  <br /></td></tr>
 <tr class="separator:a617d1669fb9773dab721527e44f6924f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -598,7 +602,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setTransportTo
 </div>
 </div>
 <a id="a520d286269ba65d2431b1aafc3fdc0f8" name="a520d286269ba65d2431b1aafc3fdc0f8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a520d286269ba65d2431b1aafc3fdc0f8">&#9670;&#160;</a></span>reportError()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a520d286269ba65d2431b1aafc3fdc0f8">&#9670;&#160;</a></span>reportError</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -616,7 +620,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setTransportTo
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">slot</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -632,7 +636,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setTransportTo
 </div>
 </div>
 <a id="a8d18b04ac7b3d65446450efe843aa90d" name="a8d18b04ac7b3d65446450efe843aa90d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d18b04ac7b3d65446450efe843aa90d">&#9670;&#160;</a></span>reportInterPluginConfig()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d18b04ac7b3d65446450efe843aa90d">&#9670;&#160;</a></span>reportInterPluginConfig</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -650,7 +654,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setTransportTo
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">slot</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -667,7 +671,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setTransportTo
 </div>
 </div>
 <a id="a8c3867c3c1b917faccf4e690d46b38ea" name="a8c3867c3c1b917faccf4e690d46b38ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c3867c3c1b917faccf4e690d46b38ea">&#9670;&#160;</a></span>sendMessageRequest()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c3867c3c1b917faccf4e690d46b38ea">&#9670;&#160;</a></span>sendMessageRequest</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -685,7 +689,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setTransportTo
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">slot</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -727,7 +731,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setTransportTo
 </div>
 </div>
 <a id="a867ff5d6ff48de5ced2efd5e04caa48d" name="a867ff5d6ff48de5ced2efd5e04caa48d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a867ff5d6ff48de5ced2efd5e04caa48d">&#9670;&#160;</a></span>setNameToMessageProperties()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a867ff5d6ff48de5ced2efd5e04caa48d">&#9670;&#160;</a></span>setNameToMessageProperties</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -745,7 +749,7 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>setTransportTo
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">slot</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
