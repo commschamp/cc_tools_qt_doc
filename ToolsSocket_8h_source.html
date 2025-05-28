@@ -104,108 +104,110 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &quot;cc_tools_qt/ToolsApi.h&quot;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &quot;cc_tools_qt/ToolsDataInfo.h&quot;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;QtCore/QString&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecc__tools__qt.html">cc_tools_qt</a></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00039" data-start="{" data-end="};">
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html">   39</a></span><span class="keyword">class </span>CC_TOOLS_API <a class="code hl_class" href="classcc__tools__qt_1_1ToolsSocket.html">ToolsSocket</a> : <span class="keyword">public</span> QObject</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    Q_OBJECT</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">public</span>:</div>
-<div class="foldopen" id="foldopen00044" data-start="{" data-end="};">
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a0800edbe4f7f6427fc103657fefa45f7">   44</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="classcc__tools__qt_1_1ToolsSocket.html#a0800edbe4f7f6427fc103657fefa45f7">ConnectionProperty</a></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a0800edbe4f7f6427fc103657fefa45f7a8616ed12926140c5782a83b50329318b">   46</a></span>        ConnectionProperty_Autoconnect = 0x1, </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        ConnectionProperty_NonDisconnectable = 0x2 </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a0800edbe4f7f6427fc103657fefa45f7a5e8eedbb35ce7cf4389abe93d46a05bc">   48</a></span>    };</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="version_8h.html">cc_tools_qt/version.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;QtCore/QObject&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;QtCore/QString&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacecc__tools__qt.html">cc_tools_qt</a></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>{</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html">   40</a></span><span class="keyword">class </span>CC_TOOLS_API <a class="code hl_class" href="classcc__tools__qt_1_1ToolsSocket.html">ToolsSocket</a> : <span class="keyword">public</span> QObject</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    Q_OBJECT</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keyword">public</span>:</div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a0800edbe4f7f6427fc103657fefa45f7">   45</a></span>    <span class="keyword">enum</span> <a class="code hl_enumeration" href="classcc__tools__qt_1_1ToolsSocket.html#a0800edbe4f7f6427fc103657fefa45f7">ConnectionProperty</a></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a0800edbe4f7f6427fc103657fefa45f7a8616ed12926140c5782a83b50329318b">   47</a></span>        ConnectionProperty_Autoconnect = 0x1, </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        ConnectionProperty_NonDisconnectable = 0x2 </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a0800edbe4f7f6427fc103657fefa45f7a5e8eedbb35ce7cf4389abe93d46a05bc">   49</a></span>    };</div>
 </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <a class="code hl_class" href="classcc__tools__qt_1_1ToolsSocket.html">ToolsSocket</a>();</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a18f85cdbe28641cba9b5097fa736c900">   54</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classcc__tools__qt_1_1ToolsSocket.html#a18f85cdbe28641cba9b5097fa736c900">~ToolsSocket</a>() noexcept;</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    <span class="keywordtype">bool</span> start();</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordtype">void</span> stop();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">bool</span> isRunning() const;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">bool</span> socketConnect();</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">void</span> socketDisconnect();</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">bool</span> isSocketConnected() const;</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordtype">void</span> sendData(<a class="code hl_typedef" href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">ToolsDataInfoPtr</a> dataPtr);</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">unsigned</span> connectionProperties() const;</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keywordtype">void</span> applyInterPluginConfig(const QVariantMap&amp; props);       </div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="keywordtype">void</span> setDebugOutputLevel(<span class="keywordtype">unsigned</span> level = 0U);</div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>signals:</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a89f8fed0e23d44e569226d243991a822">  121</a></span>    <span class="keywordtype">void</span> sigDataReceivedReport(<a class="code hl_typedef" href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">ToolsDataInfoPtr</a> data);</div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span> </div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a8b34010e38e77bcd663d8d17bffbffe5">  125</a></span>    <span class="keywordtype">void</span> sigErrorReport(const QString&amp; msg);</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a2103a0ad0b2ce48b082599f022cabb15">  129</a></span>    <span class="keywordtype">void</span> sigConnectionStatusReport(<span class="keywordtype">bool</span> connected);</div>
-<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
-<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#aa6efe3bac7ff5ad0320c62ac33ddbf88">  133</a></span>    <span class="keywordtype">void</span> sigInterPluginConfigReport(const QVariantMap&amp; props);</div>
-<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>protected:</div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    virtual <span class="keywordtype">bool</span> startImpl();</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    virtual <span class="keywordtype">void</span> stopImpl();</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    virtual <span class="keywordtype">bool</span> socketConnectImpl();</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span> </div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    virtual <span class="keywordtype">void</span> socketDisconnectImpl();</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#aab924441e657617a53c757fe0462510d">  161</a></span>    virtual <span class="keywordtype">void</span> sendDataImpl(<a class="code hl_typedef" href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">ToolsDataInfoPtr</a> dataPtr) = 0;</div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>    virtual <span class="keywordtype">unsigned</span> connectionPropertiesImpl() const;</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    virtual <span class="keywordtype">void</span> applyInterPluginConfigImpl(const QVariantMap&amp; props);     </div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    static <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> currTimestamp();</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="keywordtype">unsigned</span> getDebugOutputLevel() const;    </div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>protected slots:</div>
-<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keywordtype">void</span> reportDataReceived(<a class="code hl_typedef" href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">ToolsDataInfoPtr</a> dataPtr);</div>
-<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span> </div>
-<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordtype">void</span> reportError(const QString&amp; msg);</div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>    <span class="keywordtype">void</span> reportDisconnected();</div>
-<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">void</span> reportInterPluginConfig(const QVariantMap&amp; props);</div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
-<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>private:</div>
-<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    struct InnerState;</div>
-<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    std::unique_ptr&lt;InnerState&gt; m_state;</div>
-<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>};</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <a class="code hl_class" href="classcc__tools__qt_1_1ToolsSocket.html">ToolsSocket</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a18f85cdbe28641cba9b5097fa736c900">   55</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="classcc__tools__qt_1_1ToolsSocket.html#a18f85cdbe28641cba9b5097fa736c900">~ToolsSocket</a>() noexcept;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">bool</span> start();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> stop();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">bool</span> isRunning() const;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordtype">bool</span> socketConnect();</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordtype">void</span> socketDisconnect();</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keywordtype">bool</span> isSocketConnected() const;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordtype">void</span> sendData(<a class="code hl_typedef" href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">ToolsDataInfoPtr</a> dataPtr);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordtype">unsigned</span> connectionProperties() const;</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordtype">void</span> applyInterPluginConfig(const QVariantMap&amp; props);       </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="keywordtype">void</span> setDebugOutputLevel(<span class="keywordtype">unsigned</span> level = 0U);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>signals:</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a89f8fed0e23d44e569226d243991a822">  122</a></span>    <span class="keywordtype">void</span> sigDataReceivedReport(<a class="code hl_typedef" href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">ToolsDataInfoPtr</a> data);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a8b34010e38e77bcd663d8d17bffbffe5">  126</a></span>    <span class="keywordtype">void</span> sigErrorReport(const QString&amp; msg);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#a2103a0ad0b2ce48b082599f022cabb15">  130</a></span>    <span class="keywordtype">void</span> sigConnectionStatusReport(<span class="keywordtype">bool</span> connected);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#aa6efe3bac7ff5ad0320c62ac33ddbf88">  134</a></span>    <span class="keywordtype">void</span> sigInterPluginConfigReport(const QVariantMap&amp; props);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>protected:</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    virtual <span class="keywordtype">bool</span> startImpl();</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    virtual <span class="keywordtype">void</span> stopImpl();</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    virtual <span class="keywordtype">bool</span> socketConnectImpl();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    virtual <span class="keywordtype">void</span> socketDisconnectImpl();</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="classcc__tools__qt_1_1ToolsSocket.html#aab924441e657617a53c757fe0462510d">  162</a></span>    virtual <span class="keywordtype">void</span> sendDataImpl(<a class="code hl_typedef" href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">ToolsDataInfoPtr</a> dataPtr) = 0;</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    virtual <span class="keywordtype">unsigned</span> connectionPropertiesImpl() const;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    virtual <span class="keywordtype">void</span> applyInterPluginConfigImpl(const QVariantMap&amp; props);     </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    static <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> currTimestamp();</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">unsigned</span> getDebugOutputLevel() const;    </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>protected slots:</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keywordtype">void</span> reportDataReceived(<a class="code hl_typedef" href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">ToolsDataInfoPtr</a> dataPtr);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="keywordtype">void</span> reportError(const QString&amp; msg);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordtype">void</span> reportDisconnected();</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span> </div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="keywordtype">void</span> reportInterPluginConfig(const QVariantMap&amp; props);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>private:</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    struct InnerState;</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    std::unique_ptr&lt;InnerState&gt; m_state;</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>};</div>
 </div>
-<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
-<div class="line"><a id="l00217" name="l00217"></a><span class="lineno"><a class="line" href="namespacecc__tools__qt.html#ae7adccb7a6c1e5ce71d4efd4f0864e62">  217</a></span>using <a class="code hl_typedef" href="namespacecc__tools__qt.html#ae7adccb7a6c1e5ce71d4efd4f0864e62">ToolsSocketPtr</a> = std::shared_ptr&lt;<a class="code hl_class" href="classcc__tools__qt_1_1ToolsSocket.html">ToolsSocket</a>&gt;;</div>
-<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
-<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>}  <span class="comment">// namespace cc_tools_qt</span></div>
-<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span> </div>
-<div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html">cc_tools_qt::ToolsSocket</a></div><div class="ttdoc">Main polymorphic interface class for sockets.</div><div class="ttdef"><b>Definition</b> ToolsSocket.h:40</div></div>
-<div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html_a0800edbe4f7f6427fc103657fefa45f7"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html#a0800edbe4f7f6427fc103657fefa45f7">cc_tools_qt::ToolsSocket::ConnectionProperty</a></div><div class="ttdeci">ConnectionProperty</div><div class="ttdoc">Available socket connection properties values.</div><div class="ttdef"><b>Definition</b> ToolsSocket.h:45</div></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="namespacecc__tools__qt.html#ae7adccb7a6c1e5ce71d4efd4f0864e62">  218</a></span>using <a class="code hl_typedef" href="namespacecc__tools__qt.html#ae7adccb7a6c1e5ce71d4efd4f0864e62">ToolsSocketPtr</a> = std::shared_ptr&lt;<a class="code hl_class" href="classcc__tools__qt_1_1ToolsSocket.html">ToolsSocket</a>&gt;;</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span> </div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>}  <span class="comment">// namespace cc_tools_qt</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html">cc_tools_qt::ToolsSocket</a></div><div class="ttdoc">Main polymorphic interface class for sockets.</div><div class="ttdef"><b>Definition</b> ToolsSocket.h:41</div></div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html_a0800edbe4f7f6427fc103657fefa45f7"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html#a0800edbe4f7f6427fc103657fefa45f7">cc_tools_qt::ToolsSocket::ConnectionProperty</a></div><div class="ttdeci">ConnectionProperty</div><div class="ttdoc">Available socket connection properties values.</div><div class="ttdef"><b>Definition</b> ToolsSocket.h:46</div></div>
 <div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html_a18f85cdbe28641cba9b5097fa736c900"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html#a18f85cdbe28641cba9b5097fa736c900">cc_tools_qt::ToolsSocket::~ToolsSocket</a></div><div class="ttdeci">virtual ~ToolsSocket() noexcept</div><div class="ttdoc">Destructor.</div></div>
 <div class="ttc" id="anamespacecc__tools__qt_html"><div class="ttname"><a href="namespacecc__tools__qt.html">cc_tools_qt</a></div><div class="ttdoc">Main namespace for all classes / functions of the shared library.</div></div>
-<div class="ttc" id="anamespacecc__tools__qt_html_a0297e93cb19b022c612a0579c0de7aa1"><div class="ttname"><a href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">cc_tools_qt::ToolsDataInfoPtr</a></div><div class="ttdeci">std::shared_ptr&lt; ToolsDataInfo &gt; ToolsDataInfoPtr</div><div class="ttdoc">Pointer to ToolsDataInfo.</div><div class="ttdef"><b>Definition</b> ToolsDataInfo.h:57</div></div>
-<div class="ttc" id="anamespacecc__tools__qt_html_ae7adccb7a6c1e5ce71d4efd4f0864e62"><div class="ttname"><a href="namespacecc__tools__qt.html#ae7adccb7a6c1e5ce71d4efd4f0864e62">cc_tools_qt::ToolsSocketPtr</a></div><div class="ttdeci">std::shared_ptr&lt; ToolsSocket &gt; ToolsSocketPtr</div><div class="ttdoc">Pointer to ToolsSocket object.</div><div class="ttdef"><b>Definition</b> ToolsSocket.h:217</div></div>
+<div class="ttc" id="anamespacecc__tools__qt_html_a0297e93cb19b022c612a0579c0de7aa1"><div class="ttname"><a href="namespacecc__tools__qt.html#a0297e93cb19b022c612a0579c0de7aa1">cc_tools_qt::ToolsDataInfoPtr</a></div><div class="ttdeci">std::shared_ptr&lt; ToolsDataInfo &gt; ToolsDataInfoPtr</div><div class="ttdoc">Pointer to ToolsDataInfo.</div><div class="ttdef"><b>Definition</b> ToolsDataInfo.h:58</div></div>
+<div class="ttc" id="anamespacecc__tools__qt_html_ae7adccb7a6c1e5ce71d4efd4f0864e62"><div class="ttname"><a href="namespacecc__tools__qt.html#ae7adccb7a6c1e5ce71d4efd4f0864e62">cc_tools_qt::ToolsSocketPtr</a></div><div class="ttdeci">std::shared_ptr&lt; ToolsSocket &gt; ToolsSocketPtr</div><div class="ttdoc">Pointer to ToolsSocket object.</div><div class="ttdef"><b>Definition</b> ToolsSocket.h:218</div></div>
+<div class="ttc" id="aversion_8h_html"><div class="ttname"><a href="version_8h.html">version.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
