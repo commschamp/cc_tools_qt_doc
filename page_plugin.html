@@ -87,7 +87,7 @@ $(function() {
 <div class="line">    Q_INTERFACES(<a class="code hl_class" href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a>)</div>
 <div class="line">    ...</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div><div class="ttdoc">Interface class for plugin definition.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.h:43</div></div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div><div class="ttdoc">Interface class for plugin definition.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.h:42</div></div>
 </div><!-- fragment --><p> It must contain <a href="http://doc.qt.io/qt-5/qtplugin.html#Q_PLUGIN_METADATA">Q_PLUGIN_METADATA()</a> macro with unique ID of the plugin and name of the file that contains a detailed plugin description. The file contents are expected to be a valid <a href="https://www.w3schools.com/js/js_json_objects.asp">JSON object</a> with three values: </p><ul>
 <li><b>name</b> - Short, human readable name of the plugin </li>
 <li><b>desc</b> - Multi line description of the plugin. The value is expected to be <a href="https://www.w3schools.com/js/js_json_arrays.asp">JSON array</a> of strings. </li>
@@ -132,14 +132,14 @@ Plugin Configuration</h1>
 <div class="line">    ...</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Create QVariantMap to contain plugin configuration</span></div>
-<div class="line">    QVariantMap subConfig; </div>
+<div class="line">    QVariantMap subConfig;</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Store host address and port info</span></div>
-<div class="line">    subConfig.insert(HostSubKey, m_socket-&gt;getHost()); </div>
-<div class="line">    subConfig.insert(PortSubKey, m_socket-&gt;getPort()); </div>
+<div class="line">    subConfig.insert(HostSubKey, m_socket-&gt;getHost());</div>
+<div class="line">    subConfig.insert(PortSubKey, m_socket-&gt;getPort());</div>
 <div class="line"> </div>
 <div class="line">    <span class="comment">// Insert the configuration map as single value into provided full configuration map</span></div>
-<div class="line">    config.insert(MainConfigKey, QVariant::fromValue(subConfig)); </div>
+<div class="line">    config.insert(MainConfigKey, QVariant::fromValue(subConfig));</div>
 <div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">void</span> TcpClientSocketPlugin::reconfigureImpl(<span class="keyword">const</span> QVariantMap&amp; config)</div>

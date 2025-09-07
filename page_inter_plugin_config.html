@@ -98,7 +98,7 @@ Receiving Inter-Plugin Configuration Request</h1>
 <div class="line"> </div>
 <div class="line">    ...</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div><div class="ttdoc">Interface class for plugin definition.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.h:43</div></div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html">cc_tools_qt::ToolsPlugin</a></div><div class="ttdoc">Interface class for plugin definition.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.h:42</div></div>
 <div class="ttc" id="aclasscc__tools__qt_1_1ToolsPlugin_html_a1a0b61d0e7f8c1d2c2d869267eeed453"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsPlugin.html#a1a0b61d0e7f8c1d2c2d869267eeed453">cc_tools_qt::ToolsPlugin::applyInterPluginConfigImpl</a></div><div class="ttdeci">virtual void applyInterPluginConfigImpl(const QVariantMap &amp;props)</div><div class="ttdoc">Polymorphic inter-plugin configuration application.</div><div class="ttdef"><b>Definition</b> ToolsPlugin.cpp:171</div></div>
 </div><!-- fragment --><p>In most cases the plugin configuration is handled inside the class extending the <a class="el" href="classcc__tools__qt_1_1ToolsSocket.html">socket</a>, <a class="el" href="classcc__tools__qt_1_1ToolsFilter.html">filter</a>, or <a class="el" href="classcc__tools__qt_1_1ToolsProtocol.html">protocol</a>, then such class can override its <a class="el" href="classcc__tools__qt_1_1ToolsSocket.html#a56ca339e74d0e8b9a67c7c4d226bba37">applyInterPluginConfigImpl()</a> member function while the plugin's <a class="el" href="classcc__tools__qt_1_1ToolsPlugin.html#a1a0b61d0e7f8c1d2c2d869267eeed453">applyInterPluginConfigImpl()</a> one can redirect the request. </p><div class="fragment"><div class="line"><span class="keyword">class </span>MySocket : <span class="keyword">public</span> <a class="code hl_class" href="classcc__tools__qt_1_1ToolsSocket.html">cc_tools_qt::ToolsSocket</a></div>
 <div class="line">{</div>
@@ -132,7 +132,7 @@ Receiving Inter-Plugin Configuration Request</h1>
 <div class="line"> </div>
 <div class="line">    ...</div>
 <div class="line">};</div>
-<div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html">cc_tools_qt::ToolsSocket</a></div><div class="ttdoc">Main polymorphic interface class for sockets.</div><div class="ttdef"><b>Definition</b> ToolsSocket.h:41</div></div>
+<div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html">cc_tools_qt::ToolsSocket</a></div><div class="ttdoc">Main polymorphic interface class for sockets.</div><div class="ttdef"><b>Definition</b> ToolsSocket.h:40</div></div>
 <div class="ttc" id="aclasscc__tools__qt_1_1ToolsSocket_html_a56ca339e74d0e8b9a67c7c4d226bba37"><div class="ttname"><a href="classcc__tools__qt_1_1ToolsSocket.html#a56ca339e74d0e8b9a67c7c4d226bba37">cc_tools_qt::ToolsSocket::applyInterPluginConfigImpl</a></div><div class="ttdeci">virtual void applyInterPluginConfigImpl(const QVariantMap &amp;props)</div><div class="ttdoc">Polymorphic inter-plugin configuration application.</div><div class="ttdef"><b>Definition</b> ToolsSocket.cpp:167</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="page_inter_plugin_config_send"></a>
 Sending Inter-Plugin Configuration Request</h1>
